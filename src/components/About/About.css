@@ -15,7 +15,6 @@
 .portrait-image img{
     border-radius:8px;
     max-width: 100%;
-    transform:rotate(180deg);
 }
 
 @media screen and (max-width:740px){

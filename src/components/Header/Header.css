@@ -10,12 +10,12 @@
     display:inline-block;
     position:absolute;
     top:0;
-    left:3%;
 }
 
 .site-logo img{
     display:inline-block;
     max-height:8rem;
+    max-width:100%;
 }
 
 .menu{
@@ -96,6 +96,9 @@
 @media screen and (min-width: 741px){
     *[role="mobile"]{
         display:none;
+    }
+    .site-logo{
+        left:3%;
     }
 }
 
