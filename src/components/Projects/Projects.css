@@ -1,7 +1,6 @@
 .projects-page{
     display:block;
     height:100%;
-    overflow:hidden;
     position:relative;
     top:5rem;
 }

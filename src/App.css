@@ -272,7 +272,6 @@ p{
     
     .background-image.fixed, .background-overlay.fixed{
         position:fixed;
-        max-width:100%;
         right:0;
     }
 }
@@ -287,9 +286,6 @@ p{
     
     .background-image{
         display:inherit;
-    }
-    .background-image, .background-overlay{
-        max-width:100%;
     }
     .background-image.fixed, .background-overlay.fixed{
         position:fixed;
