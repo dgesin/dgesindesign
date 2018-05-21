@@ -1,7 +1,7 @@
 .header{
     position:fixed;
     width:100%;
-    background:linear-gradient(#0abdbd, #098686);
+    background:#098686;
     top:0;
     z-index:1000;
 }
@@ -10,6 +10,7 @@
     display:inline-block;
     position:absolute;
     top:0;
+    z-index:1000;
 }
 
 .site-logo img{
@@ -49,17 +50,24 @@
     .menu[role="fullwidth"] {
         display:none;
     }
+    div[role="mobile"] .menu{
+        background: #098686;
+    }
     .header{
         height:5rem;
     }
     .menu-button{
+        background: #098686;
+        border:none;
+        border-radius: 0 0 .8rem .8rem;
         color:white;
-        font-size: 3rem;
+        font-size: 2rem;
         position:absolute;
-        z-index: 1000;
-        top:50%;
-        transform:translateY(-50%);
-        right:1.2rem;
+        z-index: 900;
+        left:50%;
+        top:6rem;
+        transform:translateX(-50%);
+        width:5rem;
     }
     .menu{
         background:rgba(40, 60, 78, 0.9);
@@ -84,11 +92,6 @@
         color:white;
         display:block;
         line-height:6rem
-    }
-    
-    .menu-button{
-        border:none;
-        background:transparent;
     }
 }
 
