@@ -49,3 +49,29 @@
     color:white;
     margin-top:.8rem;
 }
+
+@media screen and (max-width:740px){
+    .phone{
+        display:inherit;
+    }
+    .resume{
+        padding:0;
+        position:relative;
+        top:8rem;
+    }
+    .resume-page{
+        margin-bottom:2rem;
+    }
+    .desktop{
+        display:none;
+    }
+}
+
+@media screen and (min-width: 741px){
+    .phone{
+        display:none;
+    }
+    .desktop{
+        display:inherit;
+    }
+}

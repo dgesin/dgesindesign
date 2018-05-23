@@ -45,7 +45,7 @@ class Skills extends Component {
     }
     
     zoomOut = () => {
-        const isZoomedOutMax = this.state.pageWidth == 600;
+        const isZoomedOutMax = this.state.pageWidth == 300;
         if(isZoomedOutMax){
         } else{
             this. setState({ pageWidth: this.state.pageWidth - 100 });
@@ -57,20 +57,29 @@ class Skills extends Component {
         
         return (
             <div className="section">
-                <Document className="resume" file={pdffile} onLoadSuccess={this.onDocumentLoad}>
-                    <Page className="resume-page" pageNumber={this.state.pageNumber} renderAnnotations={this.state.renderAnnotations} width={this.state.pageWidth}/>
-                </Document>
-                <div className="document-controls">
-                    <div className="page-controls">
-                        <button className="previous-page" onClick={this.previousItem}><MdArrowBack /></button>
-                        <button className="next-page" onClick={this.nextItem}><MdArrowForward /></button>
-                        <div className="page-number">
-                            Showing Page {pageNumber} of {numPages}
+                <div className="phone">
+                    <Document className="resume" file={pdffile} onLoadSuccess={this.onDocumentLoad}>
+                        <Page className="resume-page" pageNumber={1} width={300}/>
+                        <Page className="resume-page" pageNumber={2} width={300}/>
+                        <Page className="resume-page" pageNumber={3} width={300}/>                
+                    </Document>
+                </div>
+                <div className="desktop">
+                    <Document className="resume" file={pdffile} onLoadSuccess={this.onDocumentLoad}>
+                        <Page className="resume-page" pageNumber={this.state.pageNumber} renderAnnotations={this.state.renderAnnotations} width={this.state.pageWidth}/>
+                    </Document>
+                    <div className="document-controls">
+                        <div className="page-controls">
+                            <button className="previous-page" onClick={this.previousItem}><MdArrowBack /></button>
+                            <button className="next-page" onClick={this.nextItem}><MdArrowForward /></button>
+                            <div className="page-number">
+                                Showing Page {pageNumber} of {numPages}
+                            </div>
                         </div>
-                    </div>
-                    <div className="zoom-controls">
-                        <button className="zoom-out" onClick={this.zoomOut}><MdZoomOut /></button>
-                        <button className="zoom-in" onClick={this.zoomIn}><MdZoomIn /></button>
+                        <div className="zoom-controls">
+                            <button className="zoom-out" onClick={this.zoomOut}><MdZoomOut /></button>
+                            <button className="zoom-in" onClick={this.zoomIn}><MdZoomIn /></button>
+                        </div>
                     </div>
                 </div>
                 <div className="background-overlay fixed"></div>
