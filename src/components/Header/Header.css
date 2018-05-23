@@ -10,10 +10,7 @@
     display:inline-block;
     position:absolute;
     top:0;
-<<<<<<< Updated upstream
     z-index:1000;
-=======
->>>>>>> Stashed changes
 }
 
 .site-logo img{
@@ -66,19 +63,11 @@
         color:white;
         font-size: 2rem;
         position:absolute;
-<<<<<<< Updated upstream
         z-index: 900;
         left:50%;
         top:6rem;
         transform:translateX(-50%);
         width:5rem;
-=======
-        z-index: 1000;
-        top:50%;
-        transform:translateY(-50%);
-        right:1.2rem;
-        width:;
->>>>>>> Stashed changes
     }
     .menu{
         background:rgba(40, 60, 78, 0.9);
