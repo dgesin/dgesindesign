@@ -40,7 +40,7 @@ class App extends Component {
                             <NavLink to="/"><img src={DGLogo} alt="" />
                             </NavLink>
                         </div>
-                        <button onClick={this.toggleHidden.bind(this)} className="menu-button" role="mobile"><MdMenu /></button>
+                        <button onClick={this.toggleHidden.bind(this)} className="menu-button"><MdMenu /></button>
                         {!this.state.isHidden && <MainNav />}
                         <ul className="menu" role="fullwidth">
                             <li className="menu-item"><NavLink to="/">Home</NavLink></li>

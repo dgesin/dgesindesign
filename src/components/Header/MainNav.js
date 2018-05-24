@@ -23,8 +23,8 @@ class MainNav extends Component {
 
     render(){
         return(
-            <div role="mobile">
-                <ul className="menu">
+            <div className="mobile-menu">
+                <ul>
                     <li className="menu-item"><NavLink to="/" onClick={this.toggleHidden.bind(this)}>Home</NavLink></li>
                     <li className="menu-item"><NavLink to="/about" onClick={this.toggleHidden.bind(this)}>About</NavLink></li>
                     <li className="menu-item"><NavLink to="/projects" onClick={this.toggleHidden.bind(this)}>Projects</NavLink></li>

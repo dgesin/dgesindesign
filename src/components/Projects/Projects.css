@@ -119,10 +119,6 @@
     max-width:9rem;
 }
 
-.test-lab{
-    max-height:100%;
-}
-
 .logo-row img{
     display:inline-block;
     max-width: 15rem;
@@ -177,9 +173,6 @@
     }
     .logo img{
         max-width:80%;
-    }
-    .test-lab{
-        max-height:auto;
     }
 }
 

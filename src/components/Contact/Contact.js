@@ -14,8 +14,8 @@ class Contact extends Component {
                     <p>If you would like to contact me, I can be reached at <a href="mailto:derekgesin@gmail.com">derekgesin@gmail.com</a>.</p> 
                     <p>Thanks for taking the time to check out my work. I hope to hear from you soon!</p>
                 </div>
-                <div className="background-overlay fixed-bg"></div>
-                <img src={BGPhoto} className="background-image fixed-bg" alt="Photo of mission planning" />
+                <div className="background-overlay fixed"></div>
+                <img src={BGPhoto} className="background-image fixed" alt="Photo of mission planning" />
             </div>
         )
     }

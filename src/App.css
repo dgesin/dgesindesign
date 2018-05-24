@@ -7,7 +7,15 @@ html, body{
     overflow:hidden;
 }
 
-#root, .body{
+#root{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+
+.body{
     display:block;
     height:100%;
 }
@@ -173,8 +181,6 @@ p{
     z-index:2;
     top:50%;
     left:50%;
-    height:auto;
-    width:100%;
     transform:translate(-50%, -50%);
 }
 
@@ -182,24 +188,6 @@ p{
     position:relative;
     max-width:100%;
     z-index:1;
-}
-
-.attribution{
-    color:white;
-    font-size:1.4rem;
-    position:fixed;
-    bottom:2rem;
-    right:2rem;
-    z-index:100;
-}
-
-.attribution a{
-    color:rgba(155, 155, 155, 0.5);
-    text-decoration:none;
-}
-
-.attribution a:hover{
-    color:#0abdbd;
 }
 
 .background-image.top-align{
@@ -218,9 +206,26 @@ p{
     z-index:3;
 }
 
-
-.fixed-bg{
+.fixed{
     position:fixed;
+}
+
+.attribution{
+    color:white;
+    font-size:1.4rem;
+    position:fixed;
+    bottom:2rem;
+    right:2rem;
+    z-index:100;
+}
+
+.attribution a{
+    color:rgba(155, 155, 155, 0.5);
+    text-decoration:none;
+}
+
+.attribution a:hover{
+    color:#0abdbd;
 }
 
 .tooltip-target{
@@ -258,48 +263,16 @@ p{
     transition: opacity 0.2s;
 }
 
-@media screen and (max-width:740px){
-    *[role="mobile"]{
-        display:inherit;
-    }
-    *[role="desktop"]{
-        display:none;
-    }
-    .background-image, .background-overlay{
-        height:100%;
-        min-width:100%;
-    }
-    
-    .background-image.fixed, .background-overlay.fixed{
-        position:fixed;
-        right:0;
-    }
-}
-
-@media screen and (min-width:741px){
-    *[role="mobile"]{
-        display:none;
-    }
-    *[role="desktop"]{
-        display:inherit;
-    }
-    
+@media screen and (orientation:portrait){
     .background-image{
-        display:inherit;
-    }
-    .background-image.fixed, .background-overlay.fixed{
-        position:fixed;
+        height:100%;
+        width:auto;
     }
 }
 
-@media screen and (orientation: portrait){
-    .background-image, .background-overlay{
-        width:auto;
-        max-width:none;
-        height:100%;
-        width: auto;
-        top:50%;
-        left: 50%;
-        transform:translate(-50%, -50%);
+@media screen and (orientation:landscape){
+    .background-image{
+        height:auto;
+        width:100%;
     }
 }
