@@ -1,3 +1,7 @@
+*{
+    -webkit-overflow-scrolling: touch;
+}
+
 html, body{
     display:block;
     font-family: 'Roboto', san-serif;
