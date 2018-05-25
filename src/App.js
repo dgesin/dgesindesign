@@ -20,9 +20,26 @@ class App extends Component {
     constructor(props){
         super(props);
         this.state = {
+            showMenu: false,
             isHidden: true
         }
         this.toggleHidden = this.toggleHidden.bind(this);
+        this.showMenu = this.showMenu.bind(this);
+        this.closeMenu = this.closeMenu.bind(this); 
+    }
+    
+    showMenu(event) {
+        event.preventDefault();
+    
+        this.setState({ showMenu: true }, () => {
+            document.addEventListener('click', this.closeMenu);
+        });
+    }
+    
+    closeMenu() {
+        this.setState({ showMenu: false }, () => {
+            document.removeEventListener('click', this.closeMenu);
+        });
     }
     
     toggleHidden () {
@@ -40,8 +57,24 @@ class App extends Component {
                             <NavLink to="/"><img src={DGLogo} alt="" />
                             </NavLink>
                         </div>
-                        <button onClick={this.toggleHidden.bind(this)} className="menu-button"><MdMenu /></button>
-                        {!this.state.isHidden && <MainNav />}
+                        <button onClick={this.showMenu} className="menu-button"><MdMenu /></button>
+                        {
+                            this.state.showMenu
+                            ? (
+                                <div className="mobile-menu">
+                                    <ul>
+                                        <li className="menu-item"><NavLink to="/" onClick={this.toggleHidden.bind(this)}>Home</NavLink></li>
+                                        <li className="menu-item"><NavLink to="/about" onClick={this.toggleHidden.bind(this)}>About</NavLink></li>
+                                        <li className="menu-item"><NavLink to="/projects" onClick={this.toggleHidden.bind(this)}>Projects</NavLink></li>
+                                        <li className="menu-item"><NavLink to="/resume" onClick={this.toggleHidden.bind(this)}>Resum&eacute;</NavLink></li>
+                                        <li className="menu-item"><NavLink to="/contact" onClick={this.toggleHidden.bind(this)}>Contact</NavLink></li>
+                                    </ul>               
+                                </div>
+                            )
+                            : (
+                                null
+                            )
+                        }
                         <ul className="menu" role="fullwidth">
                             <li className="menu-item"><NavLink to="/">Home</NavLink></li>
                             <li className="menu-item"><NavLink to="/about">About</NavLink></li>

@@ -160,6 +160,11 @@
     }
 }
 
+@media screen and (max-width:1023px) and (orientation:landscape){
+    .menu-item a{
+        padding:0;
+    }
+}
 
 @media screen and (min-width: 1024px) and (orientation:landscape){
     .menu-button{
@@ -167,6 +172,9 @@
     }
     .mobile-menu{
         display:none;
+    }
+    .site-logo img{
+        max-height: 8rem;
     }
 }
 
