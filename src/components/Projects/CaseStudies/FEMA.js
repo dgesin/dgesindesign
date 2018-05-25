@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import { MdArrowBack, MdNavigateBefore, MdNavigateNext  } from 'react-icons/lib/md';
 import HomePhoto from '../../../assets/mhus.jpg';
 import ArmyPhoto from '../../../assets/mission-planning.jpg';
@@ -87,25 +87,6 @@ class FEMA extends Component {
                         </div>
                     </div>
                 </section>  
-                <section className="other-projects">
-                    <div className="return">
-                        <Link to="/projects" className="back-button"><MdArrowBack />
-                            <span className="label">Return to Projects Page</span>
-                        </Link>
-                    </div>
-                    <ul className="case-studies">
-                        <li>
-                            <Link to={`/projects/us-army`} className="cs-link" project="USArmy">
-                                <span className="cs-logo"><img src={ ArmyLogo } alt="US Army Logo" /></span>
-                                <span className="cs-details">
-                                    <span className="cs-label">Case Study</span>
-                                    <span className="cs-description">Building Applications for Army Commanders</span>
-                                </span>
-                                <span className="cs-photo"><img src={ArmyPhoto} alt="Photo of mission planning" /></span>
-                            </Link>
-                        </li>
-                    </ul>
-                </section>
             </div>
         );
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import './CaseStudy.css';
 import { MdArrowBack, MdNavigateBefore, MdNavigateNext } from 'react-icons/lib/md';
 import HomePhoto from '../../../assets/mission-planning.jpg';
@@ -27,11 +27,6 @@ class USArmy extends Component {
     
             <div>
                 <section className="intro">
-                    <div className="return">
-                        <Link to="/projects" className="back-button"><MdArrowBack />
-                            <span className="label">Return to Projects Page</span>
-                        </Link>
-                    </div>
                     <div className="centered-content">
                         <h1 className="study-title text-standout">Building Applications for Army Commanders</h1>
                     </div>
@@ -101,25 +96,6 @@ class USArmy extends Component {
                         </div>
                     </div>
                 </section>  
-                <section className="other-projects">
-                    <div className="return">
-                        <Link to="/projects" className="back-button"><MdArrowBack />
-                            <span className="label">Return to Projects Page</span>
-                        </Link>
-                    </div>
-                    <ul className="case-studies">
-                        <li>
-                            <Link to={`/projects/fema`} className="cs-link" project="FEMA">
-                                <span className="cs-logo"><img src={ FEMALogo } alt="FEMA Logo" /></span>
-                                <span className="cs-details">
-                                    <span className="cs-label">Case Study</span>
-                                    <span className="cs-description">Tracking Manufactured Homes for FEMA</span>
-                                </span>
-                                <span className="cs-photo"><img src={MHUPhoto} className="cs-photo" alt="Photo of mission planning" /></span>
-                            </Link>
-                        </li>
-                    </ul>
-                </section>
             </div>
         );
     }

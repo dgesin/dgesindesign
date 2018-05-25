@@ -3,6 +3,7 @@
     height:100%;
     margin:0;
     width:100%;
+    overflow:hidden;
 }
 
 .title{
@@ -55,6 +56,52 @@
     width:100%;
 }
 
+.skillset{
+    background: white;
+    margin:0;\
+    padding: 3rem 0;
+}
+
+.skill{
+    background: gray;
+    display:inline-block;
+    height:30rem;
+    margin: 2%;
+    width: 21%;
+}
+
+.project-logos{
+    background:#1f1f1f;
+    margin:0;
+    padding: 3rem 0;
+    display:block;
+    position:relative;
+    bottom:1.2rem;
+    margin-top:3rem;
+    z-index:100;
+}
+
+.project-logos h3{
+    color:white;
+}
+
+.logo-row .logo{
+    display:inline-block;
+    text-align:center;
+    width:100%;
+}
+
+.logo-row img{
+    margin: 0 auto;
+    max-width:80%;  
+    vertical-align:middle;
+}
+
+.circle img{
+    max-width:5rem;
+}
+
+
 @media screen and (max-width:740px){
     .title{
         text-align:center;
@@ -74,9 +121,21 @@
     }
 } 
 
+@media screen and (min-width:768px){
+
+    .project-logos .logo{
+        width:20%;
+    }
+    
+    
+}
+
 @media screen and (min-width: 741px) and (max-width: 1200px){
     .title{
-        margin-left: 2%;
         max-width: 60%;
     }
+    .logo img{
+        max-width: 70%;
+    }
 }
+

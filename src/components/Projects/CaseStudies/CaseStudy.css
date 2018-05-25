@@ -1,23 +1,22 @@
 .back-button{
-    background:white;
-    border-radius: 50%;
-    box-shadow:0 1px 3px rgba(0, 0, 0, 0.5);
-    color:#1f1f1f;
-    font-size: 3.6rem;
-    height:5rem;
+    background:#098686;
+    border-radius:.4rem .4rem 0 0;
+    color:white;
     padding:.8rem;
     text-align:center;
-    width:5rem;
+    text-decoration:none;
     z-index:1000;
-}
-
-.intro .return{
     position:absolute;
-    top:3rem;
-    left:3rem;
+    bottom:0;
+    left:5%;
     width:auto;
     z-index:1000;
 }
+
+.back-button span{
+    margin:.4rem;
+}
+
 
 section{
     clear:both;
@@ -206,41 +205,6 @@ section{
 .return, 
 .case-studies{
     vertical-align:middle;
-}
-
-.return{
-    color:white;
-    display:inline-block;
-    text-align:center;
-    white-space:nowrap;
-    width: 33.333%;
-}
-
-.return .back-button{
-    background:white;
-    display:inline-block;
-    position:relative;
-    text-decoration:none;
-    top:0;
-    left:0;
-}
-
-.return .back-button, .return span{
-    vertical-align:middle;
-}
-
-.return span{
-    background: white;
-    font-size:1.4rem;
-    padding: 1rem 1.2rem 1rem 2rem;
-    white-space: nowrap;
-    color: black;
-    position: absolute;
-    border-radius: .4rem;
-    top:50%;
-    left:70%;
-    transform:translateY(-50%);
-    z-index:400;
 }
 
 .other-projects .case-studies{
