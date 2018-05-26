@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from 'react';
+import { Link } from "react-router-dom";
 import {MdArrowBack, MdNavigateBefore, MdNavigateNext} from 'react-icons/lib/md';
 import IntroPhoto from '../../../assets/market-research.jpg';
 import STPhoto from '../../../assets/tile-4.jpg';
@@ -13,7 +13,7 @@ const USArmy = ({ match }) => (
                 <h1 className="study-title">Creating a Testing Platform for Ipsos</h1>
             </div>
             <div className="background-overlay"></div>
-            <img src={IntroPhoto} className="background-image" alt="Photo of marketers" />
+            <img src={IntroPhoto} className="background-image" alt="Marketers" />
         </section>
         <section className="overview">
             <div className="container">

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from 'react';
+import { Link } from "react-router-dom";
 import MHUPhoto from '../../assets/mhus.jpg';
 import ArmyPhoto from '../../assets/mission-planning.jpg';
 import ArmyLogo from "../../assets/logos/army.png";
@@ -21,7 +21,7 @@ const ProjectsLanding = ({ match }) => (
                             <span className="cs-label">Case Study</span>
                             <span className="cs-description">Building Applications for Army Commanders</span>
                         </span>
-                        <span className="cs-photo"><img src={ArmyPhoto} alt="Photo of mission planning" /></span>
+                        <span className="cs-photo"><img src={ArmyPhoto} alt="Mission planning" /></span>
                     </Link>
                 </li>
                 <li>
@@ -31,7 +31,7 @@ const ProjectsLanding = ({ match }) => (
                             <span className="cs-label">Case Study</span>
                             <span className="cs-description">Tracking Manufactured Homes for FEMA</span>
                         </span>
-                        <span className="cs-photo"><img src={MHUPhoto} className="cs-photo" alt="Photo of mission planning" /></span>
+                        <span className="cs-photo"><img src={MHUPhoto} className="cs-photo" alt="Mission planning" /></span>
                     </Link>
                 </li>
             </ul>

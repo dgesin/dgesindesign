@@ -57,24 +57,16 @@ class App extends Component {
                             <NavLink to="/"><img src={DGLogo} alt="" />
                             </NavLink>
                         </div>
-                        <button onClick={this.showMenu} className="menu-button"><MdMenu /></button>
-                        {
-                            this.state.showMenu
-                            ? (
-                                <div className="mobile-menu">
-                                    <ul>
-                                        <li className="menu-item"><NavLink to="/" onClick={this.toggleHidden.bind(this)}>Home</NavLink></li>
-                                        <li className="menu-item"><NavLink to="/about" onClick={this.toggleHidden.bind(this)}>About</NavLink></li>
-                                        <li className="menu-item"><NavLink to="/projects" onClick={this.toggleHidden.bind(this)}>Projects</NavLink></li>
-                                        <li className="menu-item"><NavLink to="/resume" onClick={this.toggleHidden.bind(this)}>Resum&eacute;</NavLink></li>
-                                        <li className="menu-item"><NavLink to="/contact" onClick={this.toggleHidden.bind(this)}>Contact</NavLink></li>
-                                    </ul>               
-                                </div>
-                            )
-                            : (
-                                null
-                            )
-                        }
+                        <button onClick={this.showMenu} className={['menu-button', this.state.showMenu && 'menu-open'].join(' ')}><MdMenu /></button>
+                        <div className={['mobile-menu', this.state.showMenu && 'menu-open'].join(' ')}>
+                            <ul>
+                                <li className="menu-item"><NavLink to="/" onClick={this.toggleHidden.bind(this)}>Home</NavLink></li>
+                                <li className="menu-item"><NavLink to="/about" onClick={this.toggleHidden.bind(this)}>About</NavLink></li>
+                                <li className="menu-item"><NavLink to="/projects" onClick={this.toggleHidden.bind(this)}>Projects</NavLink></li>
+                                <li className="menu-item"><NavLink to="/resume" onClick={this.toggleHidden.bind(this)}>Resum&eacute;</NavLink></li>
+                                <li className="menu-item"><NavLink to="/contact" onClick={this.toggleHidden.bind(this)}>Contact</NavLink></li>
+                            </ul>               
+                        </div>
                         <ul className="menu" role="fullwidth">
                             <li className="menu-item"><NavLink to="/">Home</NavLink></li>
                             <li className="menu-item"><NavLink to="/about">About</NavLink></li>

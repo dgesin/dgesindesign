@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from 'react';
+import { Link } from "react-router-dom";
 import {MdArrowBack} from 'react-icons/lib/md';
 import IntroPhoto from '../../../assets/uspto.jpg';
 
@@ -11,7 +11,7 @@ const USArmy = ({ match }) => (
                 <h1 className="study-title">Reinventing Trademark Examining</h1>
             </div>
             <div className="intro-overlay"></div>
-            <img src={IntroPhoto} className="intro-image" alt="Photo of mission planning" />
+            <img src={IntroPhoto} className="intro-image" alt="Mission planning" />
         </section>
         <section className="overview">
             <div className="container">
