@@ -41,6 +41,12 @@ body{
     overflow:auto;
 }
 
+.container{
+    margin:0 auto;
+    max-width:120rem;
+    width:90%;
+}
+
 a, button{
     font-family: 'Roboto', san-serif;
     font-weight:300;
@@ -217,7 +223,7 @@ p{
 .attribution{
     color:white;
     font-size:1.4rem;
-    position:fixed;
+    position:absolute;
     bottom:2rem;
     right:2rem;
     z-index:100;
