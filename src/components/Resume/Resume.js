@@ -1,4 +1,4 @@
-import React, { Component, View } from 'react';
+import React, { Component } from 'react';
 import "./Resume.css";
 import { Document, Page } from "react-pdf";
 import pdffile from "../../assets/resume.pdf";
@@ -21,7 +21,7 @@ class Skills extends Component {
     }
     
     nextItem = () => {
-        const isLastPage = this.state.pageNumber == 3;
+        const isLastPage = this.state.pageNumber === 3;
         if(isLastPage){
         } else {
             this.setState({ pageNumber: this.state.pageNumber + 1 });
@@ -29,15 +29,15 @@ class Skills extends Component {
     }
     
     previousItem = () => {
-        const isFirstPage = this.state.pageNumber == 1;
+        const isFirstPage = this.state.pageNumber === 1;
         if(isFirstPage){
         } else{
-            this. setState({ pageNumber: this.state.pageNumber - 1 });
+            this.setState({ pageNumber: this.state.pageNumber - 1 });
         }
     }
     
     zoomIn = () => {
-        const isZoomedInMax = this.state.pageWidth == 1300;
+        const isZoomedInMax = this.state.pageWidth === 1300;
         if(isZoomedInMax){
         } else{
             this.setState({ pageWidth: this.state.pageWidth + 100 });
@@ -45,10 +45,10 @@ class Skills extends Component {
     }
     
     zoomOut = () => {
-        const isZoomedOutMax = this.state.pageWidth == 300;
+        const isZoomedOutMax = this.state.pageWidth === 300;
         if(isZoomedOutMax){
         } else{
-            this. setState({ pageWidth: this.state.pageWidth - 100 });
+            this.setState({ pageWidth: this.state.pageWidth - 100 });
         }
     }
     
@@ -83,9 +83,9 @@ class Skills extends Component {
                     </div>
                 </div>
                 <div className="background-overlay fixed"></div>
-                <img src={BGPhoto} className="background-image fixed" alt="Photo of mission planning" />
+                <img src={BGPhoto} className="background-image fixed" alt="Desk with work documents on it" />
                 <div className="attribution">
-                    <a href="https://unsplash.com/@rawpixel?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" title="Download free do whatever you want high-resolution photos from rawpixel">Photo by rawpixel on Unsplash</a>
+                    <a href="https://unsplash.com/@rawpixel?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" title="Download free do whatever you want high-resolution photos from rawpixel" rel="noopener noreferrer">Photo by rawpixel on Unsplash</a>
                 </div>
             </div>
         );  

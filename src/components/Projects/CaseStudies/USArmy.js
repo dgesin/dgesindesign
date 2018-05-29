@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import './CaseStudy.css';
-import { MdArrowBack, MdNavigateBefore, MdNavigateNext } from 'react-icons/lib/md';
 import HomePhoto from '../../../assets/mission-planning.jpg';
-import MHUPhoto from '../../../assets/mhus.jpg';
-import FEMALogo from "../../../assets/logos/fema-logo.png";
-import InstallationPhoto from '../../../assets/installation.jpg';
-import SIPhoto from '../../../assets/stakeholder-interviews.jpg';
 import MapPhoto from '../../../assets/map-interface.png';
-import USMPhoto from '../../../assets/user-story-map.jpg';
 import GDTAPhoto from '../../../assets/gdta.jpg';
 import DSPhoto from '../../../assets/design-studio.png';
 import MPDesignPhoto from '../../../assets/multiplatform-design.png';
@@ -31,7 +24,7 @@ class USArmy extends Component {
                         <h1 className="study-title text-standout">Building Applications for Army Commanders</h1>
                     </div>
                     <div className="background-overlay"></div>
-                    <img src={HomePhoto} className="background-image" alt="Photo of mission planning" />
+                    <img src={HomePhoto} className="background-image" alt="Military planning" />
                 </section>
                 <section className="overview">
                     <div className="container">
@@ -56,7 +49,7 @@ class USArmy extends Component {
                         </ul>
                     </div>
                     <div className="background-overlay"></div>
-                    <img src={MapPhoto} className="background-image" alt="Photo of FEMA homes." />
+                    <img src={MapPhoto} className="background-image" alt="Map Interface" />
                 </section>
                 <section className="process">
                     <div className="container">

@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-    Route,
-    NavLink,
-    HashRouter, 
-    Link
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class MainNav extends Component {
 

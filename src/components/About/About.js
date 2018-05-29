@@ -1,4 +1,4 @@
-import React, { Component, View } from 'react';
+import React, { Component } from 'react';
 import "./About.css";
 import MyPhoto from "../../assets/derek-beach.jpg";
 import BackgroundPhoto from "../../assets/typewriter2.jpg";
@@ -21,9 +21,9 @@ class About extends Component {
                     </div>
                 </div>
                 <div className="background-overlay fixed"></div>
-                <img className="background-image fixed" src={BackgroundPhoto} alt="Image of typewriter"/>
+                <img className="background-image fixed" src={BackgroundPhoto} alt="Typewriter"/>
                 <div className="attribution">
-                    <a href="https://unsplash.com/@amseaman?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" title="Download free do whatever you want high-resolution photos from Andrew Seaman">Photo by Andrew Seaman on Unsplash</a>
+                    <a href="https://unsplash.com/@amseaman?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" title="Download free do whatever you want high-resolution photos from Andrew Seaman" rel="noopener noreferrer">Photo by Andrew Seaman on Unsplash</a>
                 </div>
             </div>
         );  

@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
-import { MdArrowBack, MdNavigateBefore, MdNavigateNext  } from 'react-icons/lib/md';
 import HomePhoto from '../../../assets/mhus.jpg';
-import ArmyPhoto from '../../../assets/mission-planning.jpg';
-import ArmyLogo from "../../../assets/logos/army.png";
 import InstallationPhoto from '../../../assets/installation.jpg';
 import SIPhoto from '../../../assets/stakeholder-interviews.jpg';
 import InspectorPhoto from '../../../assets/site-inspector.jpg';
@@ -19,16 +15,11 @@ class FEMA extends Component {
         return(  
             <div>
                 <section className="intro">
-                    <div className="return">
-                        <Link to="/projects" className="back-button"><MdArrowBack />
-                            <span className="label">Return to Projects Page</span>
-                        </Link>
-                    </div>
                     <div className="centered-content">
                         <h1 className="study-title text-standout">Tracking Manufactured Homes for FEMA</h1>
                     </div>
                     <div className="background-overlay"></div>
-                    <img src={InstallationPhoto} className="background-image" alt="Photo of FEMA home." />
+                    <img src={InstallationPhoto} className="background-image" alt="FEMA manufactured house" />
                 </section>
                 <section className="overview">
                     <div className="container">
@@ -53,7 +44,7 @@ class FEMA extends Component {
                         </ul>
                     </div>
                     <div className="background-overlay"></div>
-                    <img src={HomePhoto} className="background-image" alt="Photo of FEMA homes." />
+                    <img src={HomePhoto} className="background-image" alt="FEMA manufactured house" />
                 </section>
                 <section className="process">
                     <div className="container">

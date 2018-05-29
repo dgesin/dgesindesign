@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import createForm from 'react-create-form';
-import ContactForm from './ContactForm';
 import "./Contact.css";
 import BGPhoto from '../../assets/contact.jpg';
  
@@ -15,7 +13,7 @@ class Contact extends Component {
                     <p>Thanks for taking the time to check out my work. I hope to hear from you soon!</p>
                 </div>
                 <div className="background-overlay fixed"></div>
-                <img src={BGPhoto} className="background-image fixed" alt="Photo of mission planning" />
+                <img src={BGPhoto} className="background-image fixed" alt="Large satallite in field" />
             </div>
         )
     }

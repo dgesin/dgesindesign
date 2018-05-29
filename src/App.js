@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
-import {
-    Route,
-    NavLink,
-    HashRouter, 
-    Link
-} from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 import DGLogo from './assets/dg-logo.png';
 import {MdMenu} from 'react-icons/lib/md';
 import './App.css';
 import './components/Header/Header.css';
-import MainNav from "./components/Header/MainNav"
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Skills from "./components/Resume/Resume";
@@ -17,6 +11,7 @@ import Projects from "./components/Projects/Projects";
 import Contact from './components/Contact/Contact';
 
 class App extends Component {    
+    
     constructor(props){
         super(props);
         this.state = {

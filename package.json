@@ -15,7 +15,9 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.0",
     "react-scroll": "^1.7.9",
+    "react-scroll-to-component": "^1.0.2",
     "react-scrollable-anchor": "^0.6.1",
+    "react-scrollchor": "^5.0.2",
     "redux": "^3.7.2",
     "roboto-font": "^0.1.0"
   },
