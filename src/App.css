@@ -216,10 +216,6 @@ p{
     z-index:3;
 }
 
-.fixed{
-    position:fixed;
-}
-
 .attribution{
     color:white;
     font-size:1.4rem;
@@ -227,6 +223,10 @@ p{
     bottom:2rem;
     right:2rem;
     z-index:100;
+}
+
+.fixed{
+    position:fixed;
 }
 
 .attribution a{

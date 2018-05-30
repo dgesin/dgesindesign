@@ -84,7 +84,7 @@ class Skills extends Component {
                 </div>
                 <div className="background-overlay fixed"></div>
                 <img src={BGPhoto} className="background-image fixed" alt="Desk with work documents on it" />
-                <div className="attribution">
+                <div className="attribution fixed">
                     <a href="https://unsplash.com/@rawpixel?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" title="Download free do whatever you want high-resolution photos from rawpixel" rel="noopener noreferrer">Photo by rawpixel on Unsplash</a>
                 </div>
             </div>

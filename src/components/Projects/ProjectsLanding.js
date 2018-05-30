@@ -34,6 +34,16 @@ const ProjectsLanding = ({ match }) => (
                         <span className="cs-photo"><img src={MHUPhoto} className="cs-photo" alt="Mission planning" /></span>
                     </Link>
                 </li>
+                <li>
+                    <Link to={`${match.url}/sadiie`} className="cs-link" project="SADIIE">
+                        <span className="cs-logo"><img src={ FEMALogo } alt="FEMA Logo" /></span>
+                        <span className="cs-details">
+                            <span className="cs-label">Case Study</span>
+                            <span className="cs-description">Making Unstructured Text Actionable</span>
+                        </span>
+                        <span className="cs-photo"><img src={MHUPhoto} className="cs-photo" alt="Mission planning" /></span>
+                    </Link>
+                </li>
             </ul>
         </div>
         <div className="background-overlay fixed"></div>
