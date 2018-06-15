@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from "react-router-dom";
+import ScrollToTopOnMount from './ScrollToTopOnMount';
 import DGLogo from './assets/dg-logo.png';
 import {MdMenu} from 'react-icons/lib/md';
 import './App.css';
@@ -68,17 +69,18 @@ class App extends Component {
                         </ul>
                     </div>
                     <div className="content">
-                        <Route
-                            key="landingpage"
-                            exact path="/"
-                            component={LandingPage}
-                        />
-                        <Route key="skills" path="/skills" component={Skills}/>
-                        <Route key="clients" path="/clients" component={Clients}/>
-                        <Route key="about" path="/about" component={About}/>
-                        <Route key="resume" path="/resume" component={Resume}/>
-                        <Route key="projects" path="/projects" component={Projects}/>
-                        <Route key="contact" path="/contact" component={Contact}/>
+                        <ScrollToTopOnMount/>
+                            <Route
+                                key="landingpage"
+                                exact path="/"
+                                component={LandingPage}
+                            />
+                            <Route key="skills" path="/skills" component={Skills}/>
+                            <Route key="clients" path="/clients" component={Clients}/>
+                            <Route key="about" path="/about" component={About}/>
+                            <Route key="resume" path="/resume" component={Resume}/>
+                            <Route key="projects" path="/projects" component={Projects}/>
+                            <Route key="contact" path="/contact" component={Contact}/>
                     </div>
                 </div>
             </div>

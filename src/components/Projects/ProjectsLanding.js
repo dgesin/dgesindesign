@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import ScrollToTopOnMount from "../../ScrollToTopOnMount";
 import MHUPhoto from '../../assets/mhus.jpg';
 import ArmyPhoto from '../../assets/mission-planning.jpg';
 import ArmyLogo from "../../assets/logos/army.png";
@@ -11,10 +12,6 @@ import './Projects.css';
 class ProjectsLanding extends Component {
     constructor(props) {
         super(props);
-    }
-    
-    componentDidMount() {
-      window.scrollTo(0, 0)
     }
     
     render(){
@@ -40,16 +37,6 @@ class ProjectsLanding extends Component {
                                 <span className="cs-details">
                                     <span className="cs-label">Case Study</span>
                                     <span className="cs-description">Tracking Manufactured Homes for FEMA</span>
-                                </span>
-                                <span className="cs-photo"><img src={MHUPhoto} className="cs-photo" alt="Mission planning" /></span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={`${this.props.match.url}/sadiie`} className="cs-link" project="SADIIE">
-                                <span className="cs-logo"><img src={ FEMALogo } alt="FEMA Logo" /></span>
-                                <span className="cs-details">
-                                    <span className="cs-label">Case Study</span>
-                                    <span className="cs-description">Making Unstructured Text Actionable</span>
                                 </span>
                                 <span className="cs-photo"><img src={MHUPhoto} className="cs-photo" alt="Mission planning" /></span>
                             </Link>

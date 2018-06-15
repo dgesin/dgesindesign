@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollToTopOnMount from "../../../ScrollToTopOnMount";
 import HomePhoto from '../../../assets/mhus.jpg';
 import InstallationPhoto from '../../../assets/installation.jpg';
 import SIPhoto from '../../../assets/stakeholder-interviews.jpg';
@@ -11,13 +12,10 @@ class FEMA extends Component {
         super(props);
     }
     
-    componentDidMount() {
-      window.scrollTo(0, 0)
-    }
-    
     render(){
         return(  
             <div className="case-study">
+                <ScrollToTopOnMount />
                 <section className="intro">
                     <div className="centered-content">
                         <h1 className="study-title text-standout">Tracking Manufactured Homes for FEMA</h1>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './CaseStudy.css';
+import ScrollToTopOnMount from "../../../ScrollToTopOnMount";
 import HomePhoto from '../../../assets/mission-planning.jpg';
 import MapPhoto from '../../../assets/map-interface.png';
 import GDTAPhoto from '../../../assets/gdta.jpg';
@@ -13,16 +13,11 @@ class USArmy extends Component {
     constructor(props) {
         super(props);
     }
-    
-    componentDidMount() {
-      window.scrollTo(0, 0)
-    }
-    
 
     render(){
         return(
-    
             <div className="case-study">
+                <ScrollToTopOnMount />
                 <section className="intro">
                     <div className="centered-content">
                         <h1 className="study-title text-standout">Building Applications for Army Commanders</h1>
