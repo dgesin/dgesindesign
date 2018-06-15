@@ -62,7 +62,7 @@ class LandingPage extends Component {
     
     render(){
         return (
-            <div key="homepage" className="landing-page">
+            <div key="landingpage" className="landing-page">
                 <section className="title">
                     <h1>Derek Gesin</h1>
                     <h2>User Experience Design</h2>
