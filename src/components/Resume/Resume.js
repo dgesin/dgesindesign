@@ -5,7 +5,7 @@ import pdffile from "../../assets/resume.pdf";
 import {MdArrowBack, MdArrowForward, MdZoomIn, MdZoomOut} from 'react-icons/lib/md';
 import BGPhoto from '../../assets/workspace.jpg';
 
-class Skills extends Component {
+class Resume extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -92,4 +92,4 @@ class Skills extends Component {
     }
 }
 
-export default Skills;
+export default Resume;

@@ -90,12 +90,6 @@
     max-width:100%;
 }
 
-.logo-row img{
-    display:inline-block;
-    max-width: 15rem;
-    margin-bottom:2rem;
-}
-
 @media screen and (min-width:640px) and (orientation:landscape){
     .case-studies li{
         margin:0 2%;
@@ -124,46 +118,6 @@
         max-width:100%;
         top:-8%;
     }
-    .project-logos{
-        width:100%;
-        margin-top:0;
-    }
-    .project-logos h3{
-        margin-top:0;
-    }
-    .logo-row .logo{
-        width:12.5%;
-    }
-    .logo-row img{
-        margin-bottom:0;
-    }
-    .logo img{
-        max-width:80%;
-    }
-}
-
-
-@media screen and (min-width: 1024px) and (orientation: landscape){
-    .project-logos{
-        width:100%;
-        margin-top:0;
-    }
-    .project-logos h3{
-        margin-top:0;
-    }
-    .logo-row .logo{
-        width:20%;
-    }
-    .logo-row img{
-        margin-bottom:0;
-    }
-    .logo img{
-        max-width:80%;
-    }
-}
-
-@media screen and (min-width: 1024px) and (max-width:1200px) and (orientation: portrait){
-
 }
 
 

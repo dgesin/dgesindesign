@@ -17,8 +17,7 @@
     margin:.4rem;
 }
 
-
-section{
+.case-study section:not(:first-child){
     clear:both;
     display:block;
     margin: 5% 0;
@@ -114,6 +113,7 @@ section{
     color:white;
     overflow:hidden;
     padding:8rem 0;
+    position:relative;
 }
 
 .methods .container{
@@ -141,7 +141,7 @@ section{
 .step-left, .step-right, .step-fullwidth{
     clear:both;
     display:block;
-    margin:10% 0;
+    margin:0 0 10%;
 }
 
 .step-left .step-text, 

@@ -10,21 +10,27 @@ import MPDesignPhoto from '../../../assets/multiplatform-design.png';
 
 class USArmy extends Component {
 
-    componentDidMount(prevProps) {
-        window.scrollTo(0, 0);
+    constructor(props) {
+        super(props);
+    }
+    
+    componentDidMount() {
+      window.scrollTo(0, 0)
     }
     
 
     render(){
         return(
     
-            <div>
+            <div className="case-study">
                 <section className="intro">
                     <div className="centered-content">
                         <h1 className="study-title text-standout">Building Applications for Army Commanders</h1>
                     </div>
-                    <div className="background-overlay"></div>
-                    <img src={HomePhoto} className="background-image" alt="Military planning" />
+                    <div className="background">
+                        <div className="background-overlay"></div>
+                        <img src={HomePhoto} className="background-image" alt="Military planning" />
+                    </div>
                 </section>
                 <section className="overview">
                     <div className="container">
@@ -48,8 +54,10 @@ class USArmy extends Component {
                             <li>Usability Testing</li>
                         </ul>
                     </div>
-                    <div className="background-overlay"></div>
-                    <img src={MapPhoto} className="background-image" alt="Map Interface" />
+                    <div className="background">
+                        <div className="background-overlay"></div>
+                        <img src={MapPhoto} className="background-image" alt="Map Interface" />
+                    </div>
                 </section>
                 <section className="process">
                     <div className="container">

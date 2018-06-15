@@ -7,19 +7,25 @@ import USMPhoto from '../../../assets/user-story-map.jpg';
 
 class FEMA extends Component {
     
-    componentDidMount(prevProps) {
-        window.scrollTo(0, 0);
+    constructor(props) {
+        super(props);
+    }
+    
+    componentDidMount() {
+      window.scrollTo(0, 0)
     }
     
     render(){
         return(  
-            <div>
+            <div className="case-study">
                 <section className="intro">
                     <div className="centered-content">
                         <h1 className="study-title text-standout">Tracking Manufactured Homes for FEMA</h1>
                     </div>
-                    <div className="background-overlay"></div>
-                    <img src={InstallationPhoto} className="background-image" alt="FEMA manufactured house" />
+                    <div className="background">
+                        <div className="background-overlay"></div>
+                        <img src={InstallationPhoto} className="background-image" alt="FEMA manufactured house" />
+                    </div>
                 </section>
                 <section className="overview">
                     <div className="container">
@@ -43,8 +49,10 @@ class FEMA extends Component {
                             <li>User Story Mapping</li>
                         </ul>
                     </div>
-                    <div className="background-overlay"></div>
-                    <img src={HomePhoto} className="background-image" alt="FEMA manufactured house" />
+                    <div className="background">
+                        <div className="background-overlay"></div>
+                        <img src={HomePhoto} className="background-image" alt="FEMA manufactured house" />
+                    </div>
                 </section>
                 <section className="process">
                     <div className="container">

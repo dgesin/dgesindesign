@@ -4,48 +4,45 @@ import DGLogo from './assets/dg-logo.png';
 import {MdMenu} from 'react-icons/lib/md';
 import './App.css';
 import './components/Header/Header.css';
-import Home from "./components/Home/Home";
+import LandingPage from "./components/Home/LandingPage";
+import Skills from "./components/Home/Skills";
+import Clients from "./components/Home/Clients";
 import About from "./components/About/About";
-import Skills from "./components/Resume/Resume";
+import Resume from "./components/Resume/Resume";
 import Projects from "./components/Projects/Projects";
 import Contact from './components/Contact/Contact';
 
-class App extends Component {    
-    
-    constructor(props){
-        super(props);
-        this.state = {
-            showMenu: false,
-            isHidden: true
-        }
-        this.toggleHidden = this.toggleHidden.bind(this);
-        this.showMenu = this.showMenu.bind(this);
-        this.closeMenu = this.closeMenu.bind(this); 
+class App extends Component {
+
+    state = {
+        isHidden: true,
+        scrolling: false,
+        scrollTop: 0,
+        showMenu: false
     }
-    
-    showMenu(event) {
+
+    showMenu = event => {
         event.preventDefault();
-    
         this.setState({ showMenu: true }, () => {
             document.addEventListener('click', this.closeMenu);
         });
     }
-    
-    closeMenu() {
+
+    closeMenu = () => {
         this.setState({ showMenu: false }, () => {
             document.removeEventListener('click', this.closeMenu);
         });
-    }
-    
-    toggleHidden () {
+    };
+
+    toggleHidden = () => {
         this.setState({
             isHidden: !this.state.isHidden
         })
-    }
-    
+    };
+
     render() {
         return (
-            <div id="mainContainer">
+            <div id="mainContainer" ref="container">
                 <div className="body">
                     <div className="header">
                         <div className="site-logo">
@@ -55,12 +52,12 @@ class App extends Component {
                         <button onClick={this.showMenu} className={['menu-button', this.state.showMenu && 'menu-open'].join(' ')}><MdMenu /></button>
                         <div className={['mobile-menu', this.state.showMenu && 'menu-open'].join(' ')}>
                             <ul>
-                                <li className="menu-item"><NavLink to="/" onClick={this.toggleHidden.bind(this)}>Home</NavLink></li>
-                                <li className="menu-item"><NavLink to="/about" onClick={this.toggleHidden.bind(this)}>About</NavLink></li>
-                                <li className="menu-item"><NavLink to="/projects" onClick={this.toggleHidden.bind(this)}>Projects</NavLink></li>
-                                <li className="menu-item"><NavLink to="/resume" onClick={this.toggleHidden.bind(this)}>Resum&eacute;</NavLink></li>
-                                <li className="menu-item"><NavLink to="/contact" onClick={this.toggleHidden.bind(this)}>Contact</NavLink></li>
-                            </ul>               
+                                <li className="menu-item"><NavLink to="/" onClick={this.toggleHidden}>Home</NavLink></li>
+                                <li className="menu-item"><NavLink to="/about" onClick={this.toggleHidden}>About</NavLink></li>
+                                <li className="menu-item"><NavLink to="/projects" onClick={this.toggleHidden}>Projects</NavLink></li>
+                                <li className="menu-item"><NavLink to="/resume" onClick={this.toggleHidden}>Resum&eacute;</NavLink></li>
+                                <li className="menu-item"><NavLink to="/contact" onClick={this.toggleHidden}>Contact</NavLink></li>
+                            </ul>
                         </div>
                         <ul className="menu" role="fullwidth">
                             <li className="menu-item"><NavLink to="/">Home</NavLink></li>
@@ -71,12 +68,18 @@ class App extends Component {
                         </ul>
                     </div>
                     <div className="content">
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/about" component={About}/>
-                        <Route path="/resume" component={Skills}/>
-                        <Route path="/projects" component={Projects}/>
-                        <Route path="/contact" component={Contact}/>
-                    </div>                    
+                        <Route
+                            key="landingpage"
+                            exact path="/"
+                            component={LandingPage}
+                        />
+                        <Route key="skills" path="/skills" component={Skills}/>
+                        <Route key="clients" path="/clients" component={Clients}/>
+                        <Route key="about" path="/about" component={About}/>
+                        <Route key="resume" path="/resume" component={Resume}/>
+                        <Route key="projects" path="/projects" component={Projects}/>
+                        <Route key="contact" path="/contact" component={Contact}/>
+                    </div>
                 </div>
             </div>
         );

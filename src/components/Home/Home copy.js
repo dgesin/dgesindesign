@@ -5,12 +5,12 @@ import LandingPage from './LandingPage';
 import Skills from './Skills';
 import Clients from './Clients';
 
-const Home = ({ match }) => (
+const Projects = ({ match }) => (
     <div>
-        <Route exact path={`${match.url}`} component={LandingPage}/>
+        <Route exact path={``} component={LandingPage}/>
         <Route path={`${match.url}`+ "/skills"} component={Skills}/>
         <Route path={`${match.url}`+ "/clients"} component={Clients}/>
     </div>
 );
 
-export default Home;
+export default Projects;
