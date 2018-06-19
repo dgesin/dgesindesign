@@ -1,6 +1,6 @@
 {
   "name": "dgesindesign",
-  "homepage": "https://dgesin.github.io/dgesindesign",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,7 +30,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^1.2.0",
     "redux-devtools": "^3.4.1"
   }
 }
