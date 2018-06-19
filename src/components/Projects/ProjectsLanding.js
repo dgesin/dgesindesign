@@ -6,6 +6,8 @@ import ArmyPhoto from '../../assets/mission-planning.jpg';
 import ArmyLogo from "../../assets/logos/army.png";
 import FEMALogo from "../../assets/logos/fema-logo.png";
 import BGPhoto from '../../assets/design-sprint.jpg';
+import NavyLogo from "../../assets/logos/us-navy.png";
+import KneeboardPhoto from '../../assets/f18.jpg';
 import './Projects.css';
 
 
@@ -25,7 +27,7 @@ class ProjectsLanding extends Component {
                             <Link to={`${this.props.match.url}/us-army`} className="cs-link" project="USArmy">
                                 <span className="cs-logo"><img src={ ArmyLogo } alt="US Army Logo" /></span>
                                 <span className="cs-details">
-                                    <span className="cs-label">Case Study</span>
+                                    <span className="cs-label">Discovery, Design, and Development</span>
                                     <span className="cs-description">Building Applications for Army Commanders</span>
                                 </span>
                                 <span className="cs-photo"><img src={ArmyPhoto} alt="Mission planning" /></span>
@@ -35,10 +37,20 @@ class ProjectsLanding extends Component {
                             <Link to={`${this.props.match.url}/fema`} className="cs-link" project="FEMA">
                                 <span className="cs-logo"><img src={ FEMALogo } alt="FEMA Logo" /></span>
                                 <span className="cs-details">
-                                    <span className="cs-label">Case Study</span>
+                                    <span className="cs-label">Discovery</span>
                                     <span className="cs-description">Tracking Manufactured Homes for FEMA</span>
                                 </span>
                                 <span className="cs-photo"><img src={MHUPhoto} className="cs-photo" alt="Mission planning" /></span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to={`${this.props.match.url}/kneeboard`} className="cs-link" project="FEMA">
+                                <span className="cs-logo"><img src={ NavyLogo } alt="FEMA Logo" /></span>
+                                <span className="cs-details">
+                                    <span className="cs-label">Discovery, Design, and Development</span>
+                                    <span className="cs-description">Building a Kneeboard Application for Navy F-18 Pilots</span>
+                                </span>
+                                <span className="cs-photo"><img src={KneeboardPhoto} className="cs-photo" alt="Mission planning" /></span>
                             </Link>
                         </li>
                     </ul>

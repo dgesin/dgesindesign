@@ -46,13 +46,15 @@
     left:0;
     height:30rem;
     overflow:hidden;
-    text-align:center;
     width:100%;
     z-index: 100;
 }
 
 .cs-photo img{
     max-height:100%;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
 }
 
 .cs-details{
@@ -79,15 +81,16 @@
 }
 
 .cs-logo{
-    max-width: 50%;
     position:absolute;
     top:.8rem;
     right:.8rem;
+    text-align:right;
     z-index: 200;
 }
 
 .cs-logo img{
-    max-width:100%;
+    max-height:14rem;
+    max-width:70%;
 }
 
 @media screen and (min-width:640px) and (orientation:landscape){
@@ -113,7 +116,7 @@
         overflow:hidden;
     }
     
-    .case-studies li img{
+    .case-studies .cs-photo img{
         max-height:100%;
         max-width:100%;
         top:-8%;

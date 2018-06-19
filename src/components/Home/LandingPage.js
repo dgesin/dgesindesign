@@ -27,10 +27,6 @@ class LandingPage extends Component {
         super(props);
     }
     
-    componentDidMount() {
-      window.scrollTo(0, 0)
-    }
-    
     state = {
         showSkills: false,
         showClients: false
@@ -64,15 +60,23 @@ class LandingPage extends Component {
         return (
             <div key="landingpage" className="landing-page">
                 <section className="title">
-                    <h1>Derek Gesin</h1>
-                    <h2>User Experience Design</h2>
-                    <p>I work with users, development teams, and stakeholders to design technological solutions for complex subjects.</p>
-                    <div className="lp-navigation">
-                        <button onClick={this.showSkills} className={['lp-menu-item', this.state.showSkills && 'active'].join(' ')}>What I Do</button>
-                        <button onClick={this.showClients} className={['lp-menu-item', this.state.showClients && 'active'].join(' ')}>{"Who I've Worked With"}</button>
+                    <div className="title-text">
+                        <h1>Derek Gesin</h1>
+                        <h2>User Experience Design</h2>
+                        <p>I work with users, development teams, and stakeholders to design technological solutions for complex subjects.</p>
+                        <div className="lp-navigation">
+                            <button onClick={this.showSkills} className={['lp-menu-item', this.state.showSkills && 'active'].join(' ')}>What I Do</button>
+                            <button onClick={this.showClients} className={['lp-menu-item', this.state.showClients && 'active'].join(' ')}>{"Who I've Worked With"}</button>
+                        </div>
+                    </div>
+                    <div className="background mobile">
+                        <div className="background-overlay"></div>
+                        <img className="background-image" src={BackgroundPhoto} alt="Image of typewriter"/>
+                        <div className="attribution"><a href="https://unsplash.com/@grohsfabian?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" title="Download free do whatever you want high-resolution photos from Fabian Grohs">Photo by Fabian Grohs on Unsplash</a></div>
                     </div>
                 </section>
                 <section className={['skillset', this.state.showSkills && 'show'].join(' ')}>
+                    <h2>What I Do</h2>
                     <div className="scroll-container">
                         <div className="skill">
                             <div className="skill-icon">
@@ -120,6 +124,7 @@ class LandingPage extends Component {
                     <div className="background-fade"></div>
                 </section>
                 <section className={['clients', this.state.showClients && 'show'].join(' ')}>
+                    <h2>{"Who I've Worked With"}</h2>
                     <div className="background-fade"></div>
                     <div className="logo"><img src={ ArmyLogo } alt="US Patent and Trademark Logo" /></div>
                     <div className="logo"><img src={ FEMALogo } alt="Library of Congress Logo" /></div>
@@ -132,7 +137,7 @@ class LandingPage extends Component {
                     <div className="logo"><img src={ PPLogo } alt="Pioneer Press Logo" /></div>
                     <div className="logo"><img src={ CarsLogo } alt="Cars.com Logo" /></div>
                 </section>
-                <div className="background fixed">
+                <div className="background fixed wide-screen">
                     <div className="background-overlay"></div>
                     <img className="background-image" src={BackgroundPhoto} alt="Image of typewriter"/>
                     <div className="attribution"><a href="https://unsplash.com/@grohsfabian?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" title="Download free do whatever you want high-resolution photos from Fabian Grohs">Photo by Fabian Grohs on Unsplash</a></div>
