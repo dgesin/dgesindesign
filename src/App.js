@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from "react-router-dom";
 import ScrollToTopOnMount from './ScrollToTopOnMount';
-import DGLogo from './assets/dg-logo3.png';
+import DGLogo from './assets/dg-logo.png';
 import {MdMenu} from 'react-icons/lib/md';
 import './App.css';
 import './components/Header/Header.css';
