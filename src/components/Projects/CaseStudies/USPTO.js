@@ -43,18 +43,6 @@ const USArmy = ({ match }) => (
                 </div>
             </div>
         </section>
-        <section className="divider">
-        </section>
-        <section className="approach">
-        </section>
-        <section className="controls">
-            <div className="previous">
-                <Link to="/projects/ipsos" className="previous-button">Previous</Link>
-            </div>
-            <div className="next">
-                <Link to="/projects/fema" className="next-button">Next</Link>
-            </div>
-        </section>
     </div>
 );
 

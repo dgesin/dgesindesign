@@ -16,7 +16,7 @@ class CaseStudy extends Component (
     
     render(){
         return(
-            <div className="section">
+            <div className="">
                 <Route exact path={`${match.url}/{props.caseStudy}`} component={props.caseStudy}/>
             </div>
         );

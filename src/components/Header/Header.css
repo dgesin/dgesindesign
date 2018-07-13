@@ -1,7 +1,8 @@
 .header{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     position:fixed;
     width:100%;
-    background:#098686;
+    background:#FFC552;
     height:5rem;
     top:0;
     z-index:1000;
@@ -23,7 +24,7 @@
 
 .menu{
     float:right;
-    margin-right:3%;
+    margin: 0 3% 0 0;
     vertical-align:middle;
 }
 
@@ -55,13 +56,17 @@
 .menu-item a{
     background:none;
     border:0;
-    color:white;
+    color:#4A4A4A;
     font-family: "Kameron", serif;
     font-size:1.8rem;
-    line-height:2.4rem;
+    line-height:5rem;
     letter-spacing: 0.1rem;
     padding:2rem;
     text-decoration: none;
+}
+
+.menu-item a:hover{
+    color:#888;
 }
 
 .menu-button{

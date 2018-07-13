@@ -23,7 +23,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <section className="other-projects">
+                < className="other-projects">
                     <div className="return">
                         <Link to="/projects" className="back-button"><MdArrowBack />
                             <span className="label">Return to Projects Page</span>
@@ -41,7 +41,7 @@ class App extends Component {
                             </Link>
                         </li>
                     </ul>
-                </section>
+                </>
                 <div className="content">
                     <Route path="../us-army" component={USArmy}/>
                     <Route path="../fema" component={FEMA}/>

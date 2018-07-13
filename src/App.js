@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from "react-router-dom";
 import ScrollToTopOnMount from './ScrollToTopOnMount';
-import DGLogo from './assets/dg-logo.png';
+import DGLogo from './assets/dg-logo3.png';
 import {MdMenu} from 'react-icons/lib/md';
 import './App.css';
 import './components/Header/Header.css';
@@ -74,6 +74,7 @@ class App extends Component {
                                 key="landingpage"
                                 exact path="/"
                                 component={LandingPage}
+                                className="router"
                             />
                             <Route key="skills" path="/skills" component={Skills}/>
                             <Route key="clients" path="/clients" component={Clients}/>

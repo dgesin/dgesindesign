@@ -4,7 +4,7 @@ import ProjectsLanding from '../../components/Projects/ProjectsLanding';
 import '../../components/Projects/Projects.css';
 
 const ProjectsMenu = ({ match }) => (
-    <div className="section">
+    <div className="">
         <Route exact path={`${match.url}`} component={ProjectsLanding}/>
     </div>
 );

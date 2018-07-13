@@ -46,7 +46,7 @@ class Home extends Component {
         return [
             <div key="homepage" className="homepage">
             <Link to="test1" className="scroll-down"><MdArrowDownward/></Link>
-                <section className="landing-page">
+                < className="landing-page">
                     <div className="title">
                         <h1>Derek Gesin</h1>
                         <h2>User Experience Design</h2>
@@ -56,8 +56,8 @@ class Home extends Component {
                     <div className="background-overlay"></div>
                     <img className="background-image" src={BackgroundPhoto} alt="Image of typewriter"/>
                     <div className="attribution"><a href="https://unsplash.com/@grohsfabian?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" title="Download free do whatever you want high-resolution photos from Fabian Grohs">Photo by Fabian Grohs on Unsplash</a></div>
-                </section>
-                <section className="skillset">
+                </>
+                < className="skillset">
                     <div className="container">
                         <h2>What I Do</h2>
                         <div className="row">
@@ -105,7 +105,7 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                </section>
+                </>
                 <Element className="project-logos" name="test1">
                     <div className="container">
                         <h2>{"Some Groups I've Worked With"}</h2>

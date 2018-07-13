@@ -6,7 +6,7 @@ class Home extends Component {
     
     render(){
         return (
-            <section className="home-page">
+            < className="home-page">
                 <div className="centered-content">
                     <div className="navigation">
                     </div>
@@ -21,7 +21,7 @@ class Home extends Component {
                         <MenuItem><button onClick={() => scrollToComponent(this.AboutSection, { offset: 0, align: 'top', duration: 1500})}>Next Page</button></MenuItem>
                     </Menu>
                 </div>
-            </section>
+            </>
         );  
     }
 }

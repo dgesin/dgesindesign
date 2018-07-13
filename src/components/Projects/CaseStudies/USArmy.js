@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import ScrollToTopOnMount from "../../../ScrollToTopOnMount";
+import scrollToComponent from 'react-scroll-to-component';
+import {MdKeyboardArrowDown, MdKeyboardArrowUp, MdDone} from 'react-icons/lib/md';
 import HomePhoto from '../../../assets/mission-planning.jpg';
+import ArmyLogo from "../../../assets/logos/army.png";
 import MapPhoto from '../../../assets/map-interface.png';
 import GDTAPhoto from '../../../assets/gdta.jpg';
-import DSPhoto from '../../../assets/design-studio.png';
+import DSPhoto from '../../../assets/design-studio2.png';
 import MPDesignPhoto from '../../../assets/multiplatform-design.png';
 
 
@@ -18,80 +21,70 @@ class USArmy extends Component {
         return(
             <div className="case-study">
                 <ScrollToTopOnMount />
-                <section className="intro">
-                    <div className="centered-content">
-                        <h1 className="study-title text-standout">Building Applications for Army Commanders</h1>
+                <section className="intro" ref={(section) => { this.Intro = section; }}>
+                    <div className="objectives text-standout">
+                        <div className="study-project">
+                            <img src={ArmyLogo} className="study-logo" alt="US Army"/>
+                            <h1 className="study-title">Mission Planning for Army Commanders</h1>
+                        </div>
+                        <p className="label">Project Objectives</p>
+                        <ul className="custom-bullets">
+                            <li><MdDone className='bullet-check'/>Build a development library that improves the Army’s ability to create multi-platform applications</li>
+                            <li><MdDone className='bullet-check'/>Help Army Commanders and their staff maintain situational awareness while transitioning between command environments</li>
+                            <li><MdDone className='bullet-check'/>Prototype and validate capabilities for library through the design and development of a mission planning application that allows Army teams to conduct the planning process remotely.</li>
+                        </ul>
                     </div>
+                    <button className="next-button" onClick={() => scrollToComponent(this.Challenges, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowDown/></button>
                     <div className="background">
                         <div className="background-overlay"></div>
                         <img src={HomePhoto} className="background-image" alt="Military planning" />
                     </div>
                 </section>
-                <section className="overview">
-                    <div className="container">
-                        <h2>Overview</h2>
-                        <p>The goal of this project was to <b>build a development framework that could be used to create multi-device applications</b> that help Army commanders transition between command environments (e.g. At a command post, mounted in a transport, etc.). Rather than focusing on building a framework, though, we <b>aimed to design applications that allowed us to develop framework components using realworld scenarios</b>.</p>
-                        <p>We employed a user-centered design approach, conducting <b>user research with Army commanders</b> to understand workflows and determine capabilities needed. This allowed us to <b>design a mission planning application</b> that integrates realtime collaboration with the ability to quickly extract and link information from the various sources used during the planning process.</p>
+                <section className="design-challenges" ref={(section) => { this.Challenges = section; }}>
+                    <div className="challenge-image">
+                        <img src={MPDesignPhoto} alt="Map interface"/>
                     </div>
+                    <div className="challenge-text">
+                        <p className="label">Design Challenges</p>
+                        <ul className="custom-bullets">
+                            <li><MdDone className='bullet-check'/>Conduct Discovery research to understand the role of Army Commander and how the tasks and information required change through various levels of command.</li>
+                            <li><MdDone className='bullet-check'/>Research software developers as users, since they would be the eventual end-user of the library.</li>
+                            <li><MdDone className='bullet-check'/>Use research to drive the design of an application concept that manages to satisfy the needs of military units while also providing development tools that can be utilized in future Army applications.</li>
+                            <li><MdDone className='bullet-check'/>Build a system for efficiently designing interfaces meant to deploy as both web and native (e.g. iOS and Android) applications while taking into consideration the design guidelines for each platform.</li>                            
+                        </ul>
+                    </div>
+                    <button className="previous-button" onClick={() => scrollToComponent(this.Intro, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowUp/></button>
+                    <button className="next-button" onClick={() => scrollToComponent(this.Process, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowDown/></button>
                 </section>
-                <section className="methods">
-                    <div className="container">
-                        <h2>Tasks/Methods</h2>
+                
+                <section className="process step-one" ref={(section) => { this.Process = section; }}>
+                    <div className="process-images">
+                        <img src={DSPhoto} alt="Goal directed task analysis"/>
+                    </div>
+                    <div className="process-text">
+                        <p className="label">Process</p>
+                        <p>During the first phase of the project we conducted a series of stakeholder and user interviews with Army commanders—including the head of the {"Army's"} Training and Doctrine Command (TRADOC)—and software developers. These interviews provided us a list of capabilities valued from both a user and organization perspective. We then contracted a recently retired two-star general to complete a goal-directed task analysis of the Commander’s role, which became the foundation for future user scenarios.</p>                                        <p>We then ran design sprint and studio workshops (both remote and in-person) to move us from discovery into concept development. Wireframes and high-fidelity comps of ideas were created using Sketch, and then exported into Atomic to be turned into clickable prototypes. We then tested prototypes with members of CERDEC and the Mission Command Battle Lab at Fort Leavenworth to validate/disvalidate ideas.</p>  
+                    </div>
+                    <button className="previous-button" onClick={() => scrollToComponent(this.Challenges, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowUp/></button>
+                    <button className="next-button" onClick={() => scrollToComponent(this.Methods, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowDown/></button>
+                </section>
+                <section className="methods" ref={(section) => { this.Methods = section; }}>
+                    <div className="tasks">
+                        <p className="label">Methods Used</p>
                         <ul>
                             <li>User Interviews</li>
-                            <li>Goal Directed Task Analysis</li>
+                            <li>Task Analysis</li>
                             <li>Design Sprints</li>
                             <li>Design Studios</li>
                             <li>Experience Mapping</li>
                             <li>User Story Mapping</li>
-                            <li>Wireframing</li>
-                            <li>Prototyping</li>
+                            <li>Wireframing (w/Sketch)</li>
+                            <li>Rapid Prototyping (w/Atomic)</li>
                             <li>Usability Testing</li>
                         </ul>
                     </div>
-                    <div className="background">
-                        <div className="background-overlay"></div>
-                        <img src={MapPhoto} className="background-image" alt="Map Interface" />
-                    </div>
-                </section>
-                <section className="process">
-                    <div className="container">
-                        <h2>Process</h2>
-                        <div className="step-fullwidth">
-                            <div className="step-text">
-                                <h3>Determining the {"User's"} Need</h3>
-                                <p>During the first phase of the project we conducted a <b>series of user interviews with Army commanders</b>, including the head of the {"Army's"} Training and Doctrine Command (TRADOC). Through these sessions, we learned that offline capabilities were a primary objective that the toolkit would have to address. We also <b>conducted interviews with developers</b> and discovered that they were apprehensive about using lesser known frameworks since they are often not supported well. They did, however, integrate smaller development tools into their projects frequently. These findings lead our team to pivot from building a framework to designing a toolkit comprised of multiple development tools that can be integrated all together or separately. We also decided to <b>use React Native</b> as the core library so that developers can <b>deploy native applications</b> and provide offline features.</p>
-                            </div>
-                        </div>
-                        <div className="step-left">
-                            <div className="step-text">
-                                <h3>Understanding Tasks and Information Requirements</h3>
-                                <p>To understand the role of an Army commander, we needed to have a clear understanding of the tasks and information that they require. We contracted a two-star general to act as our primary subject matter expert (SME) and over the span of many interviews, <b>developed a goal-directed task analysis</b> to outline the {"commander's"} workflows and <b>determine how to improve situational awareness and decision making.</b></p>
-                            </div>
-                            <div className="step-image">
-                                <img src={GDTAPhoto} alt="" />
-                            </div>
-                        </div>
-                        <div className="step-fullwidth">
-                            <div className="step-text">
-                                <h3>Moving from Discovery to Design</h3>
-                                <p>We <b>conducted workshops to ideate on solutions</b> for the problems discovered in the task analysis. Through the workshops and continued user research, we created a concept for a realtime collaboration application based around the military decision-making process used by the Army for mission planning. Our work was structured using two weeks sprints, grouped into blocks consisting of five sprints. For each block, our team determined a set of high-level capabilities that we wanted to address and <b>I was tasked with coordinating and facilitating the regular planning workshops</b>. Since our team was located on both east and west coasts, we <b>used RealtimeBoard to run remote workshops</b>. We started the first couple blocks by <b>conducting Design Sprints</b>. As the project progressed and our application concept became well defined, we focused more on <b>User Story Mapping to identify and estimate the backlog of user stories for each block.</b></p>
-                            </div>
-                            <div className="step-image">
-                                <img src={DSPhoto} alt="" />
-                            </div>
-                        </div>
-                        <div className="step-left">
-                            <div className="step-text">
-                                <h3>Designing for Multi-platform Products</h3>
-                                <p>Each planning workshop yielded a set of paper sketches and additional ideas. <b>I was tasked with converting these sketches into visual designs to be validated with users</b>. I worked closely with the developers and project manager to identify design considerations and then <b>create wireframes and high-fidelity comps using Sketch</b>. Since the project required iOS, Android, and web versions of each design, I <b>devised templates that could be used to create multiplatform designs efficiently</b>. Finally, we <b>created clickable prototypes using Atomic</b> that we used to <b>conduct usability testing</b> and gather feedback.</p>
-                            </div>
-                            <div className="step-image">
-                                <img src={MPDesignPhoto} alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </section>  
+                    <button className="previous-button" onClick={() => scrollToComponent(this.Process, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowUp/></button>
+                </section> 
             </div>
         );
     }

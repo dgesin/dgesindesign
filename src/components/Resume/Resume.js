@@ -11,7 +11,7 @@ class Resume extends Component {
         this.state = {
             numPages: null,
             pageNumber: 1, 
-            pageWidth: 800, 
+            pageWidth: 600, 
             renderAnnotations: false
         }
     }
@@ -56,7 +56,7 @@ class Resume extends Component {
         const { pageNumber, numPages } = this.state;
         
         return (
-            <div className="section">
+            <div className="">
                 <div className="phone">
                     <Document className="resume" file={pdffile} onLoadSuccess={this.onDocumentLoad}>
                         <Page className="resume-page" pageNumber={1} width={300}/>

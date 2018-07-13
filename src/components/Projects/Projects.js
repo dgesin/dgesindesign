@@ -8,6 +8,8 @@ import FEMA from './CaseStudies/FEMA';
 import Ipsos from './CaseStudies/Ipsos';
 import SADIIE from './CaseStudies/SADIIE';
 import Kneeboard from './CaseStudies/Kneeboard';
+import TMNG from './CaseStudies/TMNG';
+import DFM from './CaseStudies/DFM';
 
 
 const Projects = ({ match }) => (
@@ -17,6 +19,8 @@ const Projects = ({ match }) => (
         <Route path={`${match.url}`+ "/fema"} component={FEMA}/>
         <Route path={`${match.url}`+ "/sadiie"} component={SADIIE}/>
         <Route path={`${match.url}`+ "/kneeboard"} component={Kneeboard}/>
+        <Route path={`${match.url}`+ "/tmng"} component={TMNG}/>
+        <Route path={`${match.url}`+ "/dfm"} component={DFM}/>
     </div>
 );
 

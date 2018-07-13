@@ -111,9 +111,15 @@ class LandingPage extends Component {
                                 <img src={FrontEndDevIcon} alt="Front-end Development"/>
                             </div>
                             <h3 className="skill-label">Front-end Development</h3>
-                <span className="skill-description">Having a solid understanding of how things are built allows a designer to communicate in the same language as their teammates. I design with prototyping programs because of their speed, but I have also been working with code since I began in this industry. By staying up-to-date on industry best practices and tools (for instance, this site is built with ReactJS), I bring a holistic perspective to every project. This way, I can work directly with the development team to ensure that every user story is feasible and contains sufficient information for the developer to complete it.</span>
+                <span className="skill-description">Having a solid understanding of how things are built allows a designer to communicate in the same language as their teammates. I design with prototyping programs because of their speed, but I have also been working with code since I began in this industry. By staying up-to-date on industry best practices and tools (for instance, this site is built with ReactJS), I brint a holistic perspective to every project. This way, I can work directly with the development team to ensure that every user story is feasible and contains sufficient information for the developer to complete it.</span>
                         </div>
-        
+                        <div className="skill">
+                            <div className="skill-icon">
+                                <img src={AgileIcon} alt="Agile Method"/>
+                            </div>
+                            <h3 className="skill-label">Agile Design</h3>
+                            <span className="skill-description">Finding a way to manage design tasks and teams inside an Agile development process is always a challenge. Every team I work with has views on how this should be done, and I have learned to adapt to each while still managing to track design work effectively. In the end, the goal is always the same. Produce designs and users stories with enough time to let the project manager and development team prioritize properly while remaining agile enough to rework designs if something changes.</span>
+                        </div>
                     </div>
                     <div className="background-fade"></div>
                 </section>

@@ -6,14 +6,14 @@ import BackgroundPhoto from "../../assets/typewriter2.jpg";
 class About extends Component {
     render(){
         return (
-            <div className="section">
+            <div className="">
                 <div className="about-content container">
                     <div className="portrait-image">
                         <img src={ MyPhoto } alt=""/>
                     </div>
-                    <div className="about-text text-standout">
+                    <div className="about-text text-standout container">
                         <h1>My Origin Story</h1>
-                        <p>As with many UX Designers, I have walked a winding path to get to where I am. I first pursued a degree in the theater, which taught me how to work with people. This lead me to a career as a corporate recruiter where I began to hone my skills with interviewing.</p>
+                        <p>As with many UX Designers, I have walked a winding path to get to where I am. I first pursued a degree in the theater, which taught me how to work with and understand people. This lead me to a career as a corporate recruiter where I began to hone my skills with interviewing.</p>
 
             <p>My focus shifted to technology when presented with the opportunity to help start a company providing online English tutoring services. Through this venture, I discovered a passion for web design and coding, leading me to return to school to obtain my second {"bachelor's"} degree and begin work as a UX Designer.</p>
 

@@ -35,12 +35,6 @@ body{
     height:100%;
 }
 
-.container{
-    margin:0 auto;
-    max-width:120rem;
-    width:90%;
-}
-
 a, button{
     font-family: 'Roboto', san-serif;
     font-weight:300;
@@ -72,11 +66,14 @@ p{
     font-weight:100;
 }
 
+.container{
+    padding:2% 5%;
+}
+
 .text-standout{
-    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.0) 70%, rgba(0, 0, 0, 0.0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.0) 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     border-radius: .4rem;
     color:white;
-    padding:2% 5%;
     text-shadow:2px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -107,6 +104,7 @@ p{
 }
 
 .background{
+    background:black;
     position:absolute;
     top:0;
     right:0;
@@ -116,17 +114,14 @@ p{
 }
 
 .background-image{
+    background:black;
+    height:100%;
+    width:auto;
     position:absolute;
     z-index:2;
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
-}
-
-.background-image img{
-    position:relative;
-    max-width:100%;
-    z-index:1;
 }
 
 .background-image.top-align{
@@ -143,6 +138,29 @@ p{
     top:0;
     width:100%;
     z-index:3;
+}
+
+.fade-edges{
+    background: rgba(153,158,163,1);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 35%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 1) 100%);
+    background-blend-mode:multiply;
+    position:absolute;
+    height:100%;
+    top:0;
+    width:100%;
+    z-index:3;
+}
+
+.footer-image{
+    position:absolute;
+    bottom:0;
+    max-height:40%;
+    overflow:hidden;
+}
+
+.footer-image img{
+    max-height:100%;
+    max-width:100%;
 }
 
 .attribution{
@@ -202,16 +220,27 @@ p{
     position:fixed;
 }
 
-@media screen and (orientation:portrait){
-    .background-image{
-        height:100%;
-        width:auto;
-    }
-}
-
-@media screen and (orientation:landscape){
+@media screen and (min-width:815px) and (orientation:landscape){
     .background-image{
         height:auto;
         width:100%;
     }
 }
+
+@media screen and (min-aspect-ratio:11/8){
+    .background-image{
+        height:auto;;
+        width:100%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container{
+        margin:0 auto;
+        max-width:120rem;
+        width:90%;
+    }
+}
+
+
+

@@ -203,6 +203,11 @@
         text-transform:uppercase;
         width:50%;
     }
+    
+    .lp-menu-item:hover{
+        background:rgba(9, 134, 134, .5);
+        cursor:pointer;
+    }
 
     .lp-menu-item.active{
         background:rgba(9, 134, 134, .5);
