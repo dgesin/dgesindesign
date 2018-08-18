@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./Resume.css";
 import { Document, Page } from "react-pdf";
-import pdffile from "../../assets/resume.pdf";
+import pdffile from "../../assets/derek-gesin-resume.pdf";
 import {MdArrowBack, MdArrowForward, MdZoomIn, MdZoomOut} from 'react-icons/lib/md';
 import BGPhoto from '../../assets/workspace.jpg';
 
