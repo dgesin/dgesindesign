@@ -7,7 +7,6 @@ import {
 import USArmy from "../components/Projects/CaseStudies/USArmy";
 import Ipsos from "../components/Projects/CaseStudies/Ipsos";
 import FEMA from "../components/Projects/CaseStudies/FEMA";
-import USPTO from "../components/Projects/CaseStudies/USPTO";
 
 class CaseStudy extends Component (
     constructor(props) = {

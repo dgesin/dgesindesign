@@ -1,97 +1,114 @@
 import React, { Component } from 'react';
-import './CaseStudy.css';
-import HomePhoto from '../../../assets/mission-planning.jpg';
+import ScrollToTopOnMount from "../../../ScrollToTopOnMount";
+import scrollToComponent from 'react-scroll-to-component';
+import {MdKeyboardArrowDown, MdKeyboardArrowUp, MdDone} from 'react-icons/lib/md';
+import ProjectTabs from '../ProjectTabs';
+import HomePhoto from '../../../assets/navy-ship.jpg';
+import NavyLogo from "../../../assets/logos/us-navy.png";
 import MapPhoto from '../../../assets/map-interface.png';
-import GDTAPhoto from '../../../assets/gdta.jpg';
-import DSPhoto from '../../../assets/design-studio.png';
-import MPDesignPhoto from '../../../assets/multiplatform-design.png';
+import MenuPhoto from '../../../assets/kb-main-menu.png';
+import CountdownPhoto from '../../../assets/kb-countdown.png';
+import DSPhoto from '../../../assets/kb-design-sprint.jpg';
+import WDPhoto from '../../../assets/interaction-design/workspace-directory.png';
 
 
 
-class USArmy extends Component {
-
-    componentDidMount(prevProps) {
-        window.scrollTo(0, 0);
+class SADIIE extends Component {
+    constructor(props) {
+        super(props);
     }
-    
 
     render(){
         return(
     
-            <div>
-                <section className="intro">
-                    <div className="centered-content">
-                        <h1 className="study-title text-standout">Making Unstructured Text Actionable</h1>
-                    </div>
-                    <div className="background-overlay"></div>
-                    <img src={HomePhoto} className="background-image" alt="Military planning" />
-                </section>
-                <section className="overview">
-                    <div className="container">
-                        <h2>Overview</h2>
-                        <p>The goal of this project was to <b>build a development framework that could be used to create multi-device applications</b> that help Army commanders transition between command environments (e.g. At a command post, mounted in a transport, etc.). Rather than focusing on building a framework, though, we <b>aimed to design applications that allowed us to develop framework components using realworld scenarios</b>.</p>
-                        <p>We employed a user-centered design approach, conducting <b>user research with Army commanders</b> to understand workflows and determine capabilities needed. This allowed us to <b>design a mission planning application</b> that integrates realtime collaboration with the ability to quickly extract and link information from the various sources used during the planning process.</p>
-                    </div>
-                </section>
-                <section className="methods">
-                    <div className="container">
-                        <h2>Tasks/Methods</h2>
-                        <ul>
-                            <li>User Interviews</li>
-                            <li>Goal Directed Task Analysis</li>
-                            <li>Design Sprints</li>
-                            <li>Design Studios</li>
-                            <li>Experience Mapping</li>
-                            <li>User Story Mapping</li>
-                            <li>Wireframing</li>
-                            <li>Prototyping</li>
-                            <li>Usability Testing</li>
+            <div className="case-study">
+                <ScrollToTopOnMount />
+                <section className="intro" ref={(section) => { this.Intro = section; }}>
+                    <div className="intro-text">
+                        <div className="intro-project">
+                            <img src={NavyLogo} className="intro-logo" alt="US Navy"/>
+                            <h1 className="intro-title">Extracting Data for Naval Logistics</h1>
+                        </div>
+                        <div className="skills">
+                            <ul className="horizontal-list">
+                                <li>Interaction Design</li>
+                                <li>Usability Testing</li>
+                                <li>User Research</li>
+                                <li>Front-end Development</li>
+                            </ul>
+                        </div>
+                        <h3>Design Challenges</h3>
+                        <ul className="custom-bullets">    
+                            <li><MdDone className='bullet-check'/>Create an application that can extract data from the vast amount of Microsoft Word, Excel, and PDF documents generated throughout the Navy acquisition process</li>
+                            <li><MdDone className='bullet-check'/>Utilize machine learning to find and correlate the logistical data needed to optimize the operational availability of systems purchased</li>           
+                            <li><MdDone className='bullet-check'/>Create an experience that allows Logistic Specialists to access system generated insights while reviewing documentation, along with summary views that let them quickly identify key data within a document</li>
                         </ul>
                     </div>
-                    <div className="background-overlay"></div>
-                    <img src={MapPhoto} className="background-image" alt="Map Interface" />
-                </section>
-                <section className="process">
-                    <div className="container">
-                        <h2>Process</h2>
-                        <div className="step-fullwidth">
-                            <div className="step-text">
-                                <h3>Determining the {"User's"} Need</h3>
-                                <p>During the first phase of the project we conducted a <b>series of user interviews with Army commanders</b>, including the head of the {"Army's"} Training and Doctrine Command (TRADOC). Through these sessions, we learned that offline capabilities were a primary objective that the toolkit would have to address. We also <b>conducted interviews with developers</b> and discovered that they were apprehensive about using lesser known frameworks since they are often not supported well. They did, however, integrate smaller development tools into their projects frequently. These findings lead our team to pivot from building a framework to designing a toolkit comprised of multiple development tools that can be integrated all together or separately. We also decided to <b>use React Native</b> as the core library so that developers can <b>deploy native applications</b> and provide offline features.</p>
-                            </div>
-                        </div>
-                        <div className="step-left">
-                            <div className="step-text">
-                                <h3>Understanding Tasks and Information Requirements</h3>
-                                <p>To understand the role of an Army commander, we needed to have a clear understanding of the tasks and information that they require. We contracted a two-star general to act as our primary subject matter expert (SME) and over the span of many interviews, <b>developed a goal-directed task analysis</b> to outline the {"commander's"} workflows and <b>determine how to improve situational awareness and decision making.</b></p>
-                            </div>
-                            <div className="step-image">
-                                <img src={GDTAPhoto} alt="" />
-                            </div>
-                        </div>
-                        <div className="step-fullwidth">
-                            <div className="step-text">
-                                <h3>Moving from Discovery to Design</h3>
-                                <p>We <b>conducted workshops to ideate on solutions</b> for the problems discovered in the task analysis. Through the workshops and continued user research, we created a concept for a realtime collaboration application based around the military decision-making process used by the Army for mission planning. Our work was structured using two weeks sprints, grouped into blocks consisting of five sprints. For each block, our team determined a set of high-level capabilities that we wanted to address and <b>I was tasked with coordinating and facilitating the regular planning workshops</b>. Since our team was located on both east and west coasts, we <b>used RealtimeBoard to run remote workshops</b>. We started the first couple blocks by <b>conducting Design Sprints</b>. As the project progressed and our application concept became well defined, we focused more on <b>User Story Mapping to identify and estimate the backlog of user stories for each block.</b></p>
-                            </div>
-                            <div className="step-image">
-                                <img src={DSPhoto} alt="" />
-                            </div>
-                        </div>
-                        <div className="step-left">
-                            <div className="step-text">
-                                <h3>Designing for Multi-platform Products</h3>
-                                <p>Each planning workshop yielded a set of paper sketches and additional ideas. <b>I was tasked with converting these sketches into visual designs to be validated with users</b>. I worked closely with the developers and project manager to identify design considerations and then <b>create wireframes and high-fidelity comps using Sketch</b>. Since the project required iOS, Android, and web versions of each design, I <b>devised templates that could be used to create multiplatform designs efficiently</b>. Finally, we <b>created clickable prototypes using Atomic</b> that we used to <b>conduct usability testing</b> and gather feedback.</p>
-                            </div>
-                            <div className="step-image">
-                                <img src={MPDesignPhoto} alt="" />
-                            </div>
-                        </div>
+                    <button className="next-button" onClick={() => scrollToComponent(this.ProcessSummary, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowDown/></button>
+                    <div className="background">
+                        <div className="background-fade rotate"></div>
+                        <img src={HomePhoto} className="background-image" alt="F-18 in air" />
                     </div>
-                </section>  
+                </section>
+
+                <section className="process-summary" ref={(section) => { this.ProcessSummary = section; }}>
+                    <div className="cs-text">
+                        <h3>Process - The Cliff Notes</h3>
+                        <ul>
+                            <li>Conducted stakeholder interviews to understand and document business objectives</li>
+                            <li>Conducted Contextual Field Visits and User Interviews to identify workflows and information requirements</li>
+                            <li>Worked with Business Analyst to understand existing process and data models</li>
+                            <li>Created personas and experience maps to document findings and create scenarios</li>
+                            <li>Created wireframes using Adobe CS</li>
+                            <li>Built interactive prototype using HTML, CSS (LESS), and JavaScript</li>
+                            <li>Worked with Product Owner, Project Manager, and Developers to develop and prioritize user stories</li>
+                        </ul>
+                    </div>
+                    <button className="previous-button" onClick={() => scrollToComponent(this.Intro, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowUp/></button>
+                    <button className="next-button" onClick={() => scrollToComponent(this.MyRole, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowDown/></button>
+                    <div className="background">
+                        <img src={MenuPhoto} className="background-image" alt="Military planning" />
+                    </div>
+                </section>
+            
+                <section className="my-role" ref={(section) => { this.MyRole = section; }}>
+                    <div className="container">
+                        <h3>My Role</h3>
+                        <ul className="custom-bullets">
+                            <li><MdDone className='bullet-check'/>UX Design Lead</li>
+                            <li><MdDone className='bullet-check'/>Joined team after initial feasibility study</li>
+                            <li><MdDone className='bullet-check'/>Developed CSS/LESS for application</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section className="process col-2" ref={(section) => { this.Process = section; }}>
+                    <h3>Process - The Story</h3>
+                    <div className="left">
+                        <img src={CountdownPhoto} alt="Countdown interface of app"/>
+                    </div>
+                    <div className="right">
+                        <p></p>
+                    </div>
+                </section>
+            
+                <section className="outcomes" ref={(section) => { this.Outcomes = section; }}>
+                    <div className="container">
+                        <h3>Outcomes</h3>
+                        <ul>
+                            <li>Created new discovery processes for company by integrating contextual field visit and experience mapping capabilities.</li>
+                            <li>Due to budget limitations and need for additional resources to develop machine learning capabilities, I was moved to another project after conducting discovery research and designing initial prototype.</li>
+                        </ul>
+                    </div>
+                </section>
+            
+                <section className="other-projects" ref={(section) => { this.OtherProjects = section; }}>
+                    <button className="previous-button" onClick={() => scrollToComponent(this.Intro, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowUp/></button>
+                    <ProjectTabs />
+                </section>
             </div>
         );
     }
 }
 
-export default USArmy;
+export default SADIIE;

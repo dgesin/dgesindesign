@@ -6,7 +6,7 @@ import BackgroundPhoto from "../../assets/typewriter2.jpg";
 class About extends Component {
     render(){
         return (
-            <div className="">
+            <div className="about-page">
                 <div className="about-content container">
                     <div className="portrait-image">
                         <img src={ MyPhoto } alt=""/>
@@ -17,9 +17,10 @@ class About extends Component {
 
             <p>My focus shifted to technology when presented with the opportunity to help start a company providing online English tutoring services. Through this venture, I discovered a passion for web design and coding, leading me to return to school to obtain my second {"bachelor's"} degree and begin work as a UX Designer.</p>
 
-<p>Since that time, I have worked for a host of well-known clients on both large scale and exploratory projects. This has allowed me to developed an arsenal of research methods, expertise with prototyping tools, and the ability to use both to organize a project and bring it to life.</p>
+<p>Since that time, I have worked for a host of well-known clients on both large scale and exploratory projects. This has allowed me to developed an arsenal of research methods, expertise with prototyping tools, and the ability to use both to organize projects and bring them to life.</p>
                     </div>
                 </div>
+                <div className="background-fade fixed"></div>
                 <div className="background-overlay fixed"></div>
                 <img className="background-image fixed" src={BackgroundPhoto} alt="Typewriter"/>
                 <div className="attribution">
