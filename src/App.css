@@ -5,7 +5,7 @@
 html, body{
     display:block;
     font-family: 'Open Sans', san-serif;
-    font-weight:200;
+    font-weight:400;
     height:100%;
     width:100%;
 }
@@ -209,7 +209,7 @@ blockquote .quote-icon{
     position:absolute;
     bottom:2rem;
     right:2rem;
-    z-index:201;
+    z-index:1000;
 }
 
 .attribution a{
@@ -319,9 +319,14 @@ blockquote .quote-icon{
     .scroll-navigation{
         display:inherit;
     }
+    
+    .attribution{
+        z-index:201;
+    }
 }
 
 @media screen and (min-width:815px) and (orientation:landscape){
+    
     .background-image{
         height:100%;
         width:auto;
@@ -337,7 +342,7 @@ blockquote .quote-icon{
     
     .background-fade.rotate{
         top:-50%;
-        left:-150px;
+        left:-20%;
         right:20%;
         height:200%;
         transform:rotate(-30deg);
@@ -358,6 +363,10 @@ blockquote .quote-icon{
 }
 
 @media screen and (min-width: 1200px){
+    
+    html, body{
+        font-weight:200;
+    }
     
     blockquote:after{
         background: rgba(227, 223, 255, 0.2);

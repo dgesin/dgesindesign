@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './LandingPage.css';
 import scrollToComponent from 'react-scroll-to-component';
 import { Link } from "react-router-dom";
-import BackgroundPhoto from "../../assets/devices.jpg";
+import BackgroundPhoto from "../../assets/devices.png";
 import {MdArrowDownward} from 'react-icons/lib/md';
 import ArmyLogo from "../../assets/logos/army.png";
 import USPTOLogo from "../../assets/logos/uspto.png";
@@ -145,7 +145,7 @@ class LandingPage extends Component {
                         <div className="skill-details">
                             <div className="centered-content">
                                 <h3 className="skill-label">Front-end Development</h3>
-                                <p className="skill-description">While I typically use design tools to prototype quickly, I have also been coding for years. Having knowledge of what developers do helps me bring a holistic perspective to every project. This way, I can work directly with the development team to ensure that user stories are feasible and contain sufficient information for the developer to complete them.</p>
+                                <p className="skill-description">While I typically use design tools to prototype quickly, I have also been coding for years. Having knowledge of what developers need brings a holistic perspective to my designs. I work directly with the development team to ensure that user stories are feasible and contain sufficient information to be completed as designed.</p>
                             </div>
                         </div>
                     </div>

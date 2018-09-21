@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ScrollToTopOnMount from "../../../ScrollToTopOnMount";
 import scrollToComponent from 'react-scroll-to-component';
 import {MdKeyboardArrowDown, MdKeyboardArrowUp, MdDone} from 'react-icons/lib/md';
-import ProjectTabs from '../ProjectTabs';
+import CSFooter from '../CSFooter';
 import HomePhoto from '../../../assets/test-lab-4.jpg';
 import DFMLogo from "../../../assets/logos/dfm.png";
 import LabPhoto from '../../../assets/test-lab-3.jpg';
@@ -47,14 +47,16 @@ class USArmy extends Component {
                     <div className="container">
                         <h3>My Role</h3>
                         <ul className="custom-bullets">
-                            <li><MdDone className='bullet-check'/>Principle Investigator and UX Design Lead</li>
-                            <li><MdDone className='bullet-check'/>Coordinated and co-facilitated user research</li>
-                            <li><MdDone className='bullet-check'/>Created wireframes, mockups, and prototypes</li>
-                            <li><MdDone className='bullet-check'/>Assisted with writing of user stories</li>
-                            <li><MdDone className='bullet-check'/>Organized and facilitated design sprints and studios</li>
-                            <li><MdDone className='bullet-check'/>Mentored Junior Designers and Interns</li>
-                            <li><MdDone className='bullet-check'/>Assisted executive and business development teams in commercialization strategy development</li>
-                            <li><MdDone className='bullet-check'/>Organized and assisted with facilitation of user story mapping workshops</li>
+                            <li><MdDone className='bullet-check'/>One of five UX Designers that managed design work for {"DFM's"} 100+ subsidiary companies</li>
+                            <li><MdDone className='bullet-check'/>Organized the creation of the DFM User Research Lab</li>
+                            <li><MdDone className='bullet-check'/>Worked with DFM leadership and building management to obtain required resources and testing space</li>
+                            <li><MdDone className='bullet-check'/>Created high volume testing schedule</li>
+                            <li><MdDone className='bullet-check'/>Coordinated recruitment of testing participants</li>
+                            <li><MdDone className='bullet-check'/>Conducted stakeholder interviews with project and company leads to identify needs</li>
+                            <li><MdDone className='bullet-check'/>Created test scripts</li>
+                            <li><MdDone className='bullet-check'/>Coordinated and co-facilitated user testing</li>
+                            <li><MdDone className='bullet-check'/>Co-facilitated debriefing sessions and analysis of test findings</li>
+                            <li><MdDone className='bullet-check'/>Developed test reports and presented findings to stakeholders</li>
                         </ul>
                     </div>
                 </section>
@@ -79,7 +81,7 @@ class USArmy extends Component {
                     </div>
                     <div className="row">
                         <div className="right">
-                            <p>Having built the lab, we then began conducting regular tests. With many products and a small UX team, we created a process to quickly determine a project’s needs and build a test that would help them gather user feedback. We always started by conducting stakeholder interviews with the project team. This allowed us to identify project objectives, completed and planned work, and questions discussed among their team. This information helped us determine the best method of testing and write a script. With other processes built for efficient recruitment and analysis, we were able to go from our first conversation with the team to providing actionable items in 1-2 weeks.</p>      
+                            <p>Having built the lab, we then began conducting regular tests. With many products and a small UX team, we created a process to quickly determine a project’s needs and build a test that would help them gather user feedback. We always started by conducting stakeholder interviews with the project team. This allowed us to identify project objectives, completed and planned work, and questions discussed among their team. This information helped us determine the best method of testing and write a script. With other processes built for efficient recruitment and analysis, we were able to go from our first conversation with the project teams to providing actionable items within a few weeks.</p>      
                         </div>
                         <div className="left">
                             <img src={TestPhoto1} alt="Usability test being completed"/>
@@ -88,9 +90,20 @@ class USArmy extends Component {
                     </div>
                 </section>
             
+                <section className="outcomes" ref={(section) => { this.Outcomes = section; }}>
+                    <div className="container">
+                        <h3>Outcomes</h3>
+                        <ul className="custom-bullets">
+                            <li><MdDone className='bullet-check'/>What started as a proof of concept turned into a full user research program running up to four rounds of testing per month.</li>
+                            <li><MdDone className='bullet-check'/>Test findings led to approximately $5 million dollars in revenue for the company.</li>
+                            <li><MdDone className='bullet-check'/>Research efforts helped company develop a more user-centeric approach to both advertising and editorial operations.</li> 
+                        </ul>
+                    </div>
+                </section>
+            
                 <section className="other-projects" ref={(section) => { this.OtherProjects = section; }}>
                     <button className="previous-button" onClick={() => scrollToComponent(this.Intro, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowUp/></button>
-                    <ProjectTabs />
+                    <CSFooter />
                 </section>
             </div>
         );

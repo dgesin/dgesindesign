@@ -34,7 +34,7 @@ class ProjectsLanding extends Component {
                 <Tabs>
                     <div className="projects-description">
                         <h1>Projects</h1>
-                        <p>{"Whether it's building a user testing lab for Digital First Media or working with soldiers to help them plan missions, each project I've worked on has helped me grow as a designer. The following case studies will give you a better feel for what I do."}</p>
+                        <p>{"Whether it's building a user testing lab for Digital First Media or working with soldiers to help them plan missions, each project I've worked on has helped me grow as a designer. The following case studies will give you a better idea of what I do."}</p>
                     </div>
                     <div className="projects">
                         <AllProjects />

@@ -63,6 +63,15 @@
     color:white;
 }
 
+.case-studies.other-designs img{
+    box-shadow:.2rem .4rem rgba(0, 0, 0, 0.5);
+    max-width:100%;
+}
+
+.case-studies.other-designs li{
+    margin:5% auto;
+}
+
 .case-studies li{
     background:rgba(150, 150, 150, 1);
     color:white;
@@ -186,6 +195,10 @@
     .case-studies li{
         margin:1% 2%;
         width:46%;
+    }
+    
+    .case-studies.other-designs li{
+        width:90%;
     }
 }
 

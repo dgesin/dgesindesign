@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import MHUPhoto from '../../../../assets/mhus.jpg';
+import MHUPhoto from '../../../../assets/mhus.png';
 import FEMALogo from "../../../../assets/logos/fema-logo.png";
 
 class FEMATile extends Component {

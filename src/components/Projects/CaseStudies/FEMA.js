@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import ScrollToTopOnMount from "../../../ScrollToTopOnMount";
 import scrollToComponent from 'react-scroll-to-component';
 import {MdKeyboardArrowDown, MdKeyboardArrowUp, MdDone} from 'react-icons/lib/md';
-import ProjectTabs from '../ProjectTabs';
-import HomePhoto from '../../../assets/mhus.jpg';
+import CSFooter from '../CSFooter';
+import HomePhoto from '../../../assets/mhus.png';
 import USPTOLogo from "../../../assets/logos/fema-logo.png";
 import DSPhoto from '../../../assets/site-inspector.jpg';
 import MPDesignPhoto from '../../../assets/stakeholder-interviews.jpg';
@@ -31,26 +31,27 @@ class USArmy extends Component {
                         <ul className="custom-bullets">
                             <li><MdDone className='bullet-check'/>Improve the way that FEMA tracks and manages the process for providing Transportable Temporary Housing Units (TTHUs) to disaster survivors.</li>
                             <li><MdDone className='bullet-check'/>Research and document the TTHU lifecycle to identify potential areas for process reengineering and system development.</li>
-                            <li><MdDone className='bullet-check'/>Identify requirements for development of acquisition of an enterprise platform to manage the process.</li>          
+                            <li><MdDone className='bullet-check'/>Identify requirements for development or acquisition of an enterprise platform to manage the process.</li>          
                         </ul>
                     </div>
                     <button className="next-button" onClick={() => scrollToComponent(this.ProcessSummary, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowDown/></button>
                     <div className="background">
                         <div className="background-fade rotate"></div>
+                        <div className="background-overlay"></div>
                         <img src={HomePhoto} className="background-image" alt="FEMA manufactured homes" />
                     </div>
                 </section>
             
                 <section className="process-summary" ref={(section) => { this.ProcessSummary = section; }}>
                     <div className="cs-text">
-                        <h3>Process - The Cliff Notes</h3>
+                        <h3>Process Summary</h3>
                         <ul>
                             <li>Applied user-centered design approach to requirements gathering process</li>
                             <li>Conducted stakeholder interviews to identify vision, mission, strategy, and goals</li>
                             <li>Conducted contextual field visits with site inspectors, installation crews, manufacturing plant operators and inspectors, and storage facility operators</li>
                             <li>Conducted user interviews with other FEMA and contractor personnel to further define process and data requirements</li>
                             <li>Documented and reported findings to product owners</li>
-                            <li>Created user personas and experience maps to assist in communicating findings</li>
+                            <li>Created user personas, experience maps, and architecture diagrams to assist in communicating findings</li>
                             <li>Became technology advisors for TTHU branch of FEMA</li>
                         </ul>
                     </div>
@@ -65,14 +66,14 @@ class USArmy extends Component {
                     <div className="container">
                         <h3>My Role</h3>
                         <ul className="custom-bullets">
-                            <li><MdDone className='bullet-check'/>Principle Investigator and UX Design Lead</li>
+                            <li><MdDone className='bullet-check'/>Lead five-person team of UX, Business, and Solution Architects</li>
+                            <li><MdDone className='bullet-check'/>Senior UX Architect for project</li>
                             <li><MdDone className='bullet-check'/>Coordinated and co-facilitated user research</li>
-                            <li><MdDone className='bullet-check'/>Created wireframes, mockups, and prototypes</li>
-                            <li><MdDone className='bullet-check'/>Assisted with writing of user stories</li>
-                            <li><MdDone className='bullet-check'/>Organized and facilitated design sprints and studios</li>
-                            <li><MdDone className='bullet-check'/>Mentored Junior Designers and Interns</li>
-                            <li><MdDone className='bullet-check'/>Assisted executive and business development teams in commercialization strategy development</li>
-                            <li><MdDone className='bullet-check'/>Organized and assisted with facilitation of user story mapping workshops</li>
+                            <li><MdDone className='bullet-check'/>Created user personas, experience maps, and reports to communicate research findings</li>
+                            <li><MdDone className='bullet-check'/>Managed work in Jira</li>
+                            <li><MdDone className='bullet-check'/>Managed relationship with client</li>
+                            <li><MdDone className='bullet-check'/>Acted as subject matter expert to assist with development of business process models</li>
+                            <li><MdDone className='bullet-check'/>Worked with Recovery Technology Program Directorate to develop current and target states for all direct housing missions</li>
                         </ul>
                     </div>
                 </section>
@@ -89,7 +90,7 @@ class USArmy extends Component {
                     </div>
                     <div className="row">
                         <div className="left">
-                            <p>With user groups located all over the country, we had to organize and manage a complex schedule of user interviews and contextual inquiries. We conducted interviews to learn about and document user workflows and the information requirements. We then performed contextual inquiries to observe critical workflows in person and identify environmental considerations. Some of the work observed included traveling to Texas to observe site inspectors and installation crews working on recovery from Hurricane Harvey, going to a long-term storage facility to see where they store the homes and commodities (e.g. water, blankets, etc.) that are provided when a distaster occurs, and touring a manufacturing facility to observe homes being built. We then created a series of experience maps to communicate findings by outlining user tasks, data being used or generated, and other key insights.</p>
+                            <p>With user groups located all over the country, we had to organize and manage a complex schedule of user interviews and contextual inquiries. We conducted interviews to understand user workflows and information requirements. We then performed contextual inquiries to observe critical workflows in person and identify environmental considerations. Some of the work observed included traveling to Texas to observe site inspectors and installation crews working on recovery from Hurricane Harvey, going to a long-term storage facility to see where they store the homes and commodities (e.g. water, blankets, etc.) that are provided when a distaster occurs, and touring a manufacturing facility to observe homes being built. We then created a series of experience maps to communicate findings by outlining user tasks, data being used or generated, and other key insights.</p>
                         </div>
                         <div className="right">
                             <img src={DSPhoto} alt="Goal directed task analysis"/>
@@ -108,17 +109,18 @@ class USArmy extends Component {
                 <section className="outcomes" ref={(section) => { this.Outcomes = section; }}>
                     <div className="container">
                         <h3>Outcomes</h3>
-                        <ul>
-                            <li>Work produced helped product owner communicate need for improvement to FEMA leadership and led to a larger initiative to improve systems for all divisions responsible for helping with housing missions.</li>
-                            <li>Currently working with a project team comprised of multiple divisions to progress project.</li>
-                            <li>Working with TTHU Branch Chief to develop proof of concepts for smaller system improvement initiatives within TTHU lifecycle.</li>
+                        <ul className="custom-bullets">
+                            <li><MdDone className='bullet-check'/>Work produced helped product owner communicate need for improvement to FEMA leadership and led to a larger initiative to improve systems for all divisions responsible for helping with housing missions.</li>
+                            <li><MdDone className='bullet-check'/>Positive response from client allowed us to double team size and increase scope from requirements gathering to design of pilot applications.</li>
+                            <li><MdDone className='bullet-check'/>Currently working with a project team comprised of multiple divisions to progress project.</li>
+                            <li><MdDone className='bullet-check'/>Asked by Branch Chief to act as their proxy in design and development process to ensure teams involved have accurate understanding of organization and user needs.</li>
                         </ul>
                     </div>
                 </section>
             
                 <section className="other-projects" ref={(section) => { this.OtherProjects = section; }}>
                     <button className="previous-button" onClick={() => scrollToComponent(this.Intro, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowUp/></button>
-                    <ProjectTabs />
+                    <CSFooter />
                 </section>
             </div>
         );

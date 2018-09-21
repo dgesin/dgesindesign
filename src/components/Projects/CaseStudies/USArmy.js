@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import ScrollToTopOnMount from "../../../ScrollToTopOnMount";
 import scrollToComponent from 'react-scroll-to-component';
 import {MdKeyboardArrowDown, MdKeyboardArrowUp, MdDone, MdFormatQuote} from 'react-icons/lib/md';
-import ProjectTabs from '../ProjectTabs';
+import CSFooter from '../CSFooter';
 import HomePhoto from '../../../assets/mission-planning.jpg';
 import ArmyLogo from "../../../assets/logos/army.png";
 import MapPhoto from '../../../assets/map-interface.png';
 import GDTAPhoto from '../../../assets/gdta.jpg';
 import DSPhoto from '../../../assets/design-studio2.png';
 import MPDesignPhoto from '../../../assets/multiplatform-design.png';
+import GHPhoto from '../../../assets/dimsum-gh.png';
 import WDPhoto from '../../../assets/interaction-design/workspace-directory.png';
 import DesignSprintImage from '../../../assets/design-sprint2.jpg';
 import MPAWireframeImage from '../../../assets/mpa-wireframe.png';
@@ -42,6 +43,7 @@ class USArmy extends Component {
                             <li><MdDone className='bullet-check'/>Create a developer toolkit that provides cross-platform functionality to be used by Army software developers.</li>
                             <li><MdDone className='bullet-check'/>Improve the {"commander's"} ability to transition between command environments while maintaining situational awareness.</li>
                             <li><MdDone className='bullet-check'/>Design features that satisfy the implementation needs of development team while also providing functionality that is useful for Army commanders and their team.</li>
+                             <li><MdDone className='bullet-check'/>Create a tool that allows the unit to conduct remote mission planning.</li>
                             <li><MdDone className='bullet-check'/>Work with executive and business development divisions of ATS to identify commercialization strategies.</li>
                         </ul>
                     </div>
@@ -96,7 +98,7 @@ class USArmy extends Component {
                         <div className="right">
                             <p>The Army contracted us to build a developer toolkit that allows their software developers to create applications that can be deployed across multiple device types. It began as a feasibility study to determine requirements and strategy.</p>
                 <p>We conducted a series of user interviews with Army commanders, including facilitating a panel discussion with the head of the Army Training and Doctrine Center (TRADOC) and their staff. This produced a list of capabilities currently being sought after by Army leadership. We also conducted interviews with software developers to identify key aspects looked for when choosing development tools. One of the quotes heard repeatedly was that the best tools they used were created out of necessity to assist them when developing an application.</p>
-                            <p>These two insights led to the decision that the best way for us to develop a toolkit was to focus on building an actual application. We contracted a recently retired general to act as a subject matter expert to help us build a task analysis with the workflows and situational awareness requirements for Army commanders.</p>
+                            <p>This insight led us to the decision that the best way to develop a toolkit is to focus on building an actual application. With this in mind, we contracted a recently retired general to act as a subject matter expert to help us build a task analysis with the workflows and situational awareness requirements for Army commanders.</p>
                         </div>
                         <div className="left">
                             <blockquote>
@@ -109,28 +111,28 @@ class USArmy extends Component {
                     <div className="row">
                         <div className="left">
                             <p>Through this process and discussions with other SMEs, we discovered that there was a need for better tools to assist with the military decision-making process (MDMP) used to plan missions. We decided to use this as the design challenge to assist with building the toolkit.</p>
-                            <p>To begin developing the application concept, we conducted a design sprint. The sprint helped us bring the team together so we could review the research completed and ideate on possible directions for the app. Coming out of the sprint we had a number of concepts that we wanted to begin designing and developing.</p>
-                            <p>To organize the work, we conducted a user story mapping workshop. This involved identifying the capabilities that we wanted to build for users, and then decomposing each capability into a set of user stories that could be worked via an Agile development process.</p>
+                            <p>To begin developing the application concept, we conducted a design studio. The studio helped us bring the team together so we could review the research completed and ideate on possible directions for the app. Coming out of the workshop we had a number of concepts that we wanted to begin designing, testing, and developing.</p>
+                            <p>To organize the work, we conducted a user story mapping exercise. This involved identifying the capabilities that we wanted to build for users, and then decomposing each capability into a set of user stories that could be worked via an Agile development process.</p>
                         </div>
                         <div className="right">
-                            <img src={DesignSprintImage} />
+                            <img src={DesignSprintImage} alt="Whiteboard via RealtimeBoard from design sprint"/>
                         </div>
                     </div>
                     <div className="row">
                         <div className="right">
-                            <p>With the backlog in place, we began designing the different parts of the application. For each design begins by identifying the applicable scenario(s). Based on the scenario, I would document any design challenge(s) and things to consider. Lastly, I listed any initial solutions I had thought of so far. This is done before a single wireframe is drawn to keep me focused on the challenge at hand and breakdown preconceived notions of what the final design should entail. Writing stuff down forces me to examine what is and {"isn't"} a real constraint.</p>
-                            <p>The first designs for the app typically began with a wireframe to gather team and SME feedback before adding fidelity. As the project progressed and my stable of Sketch symbols grew, initial designs tended to look like mockups since many of the patterns and UI components had been established.</p>
+                            <p>With the backlog in place, we began designing the different parts of the application. Each design began by identifying the applicable scenario(s). After confirming the scenario with the team, I would document the design challenge(s) presented by the scenario, the user workflow, and any solutions that had been discussed by the team. I would then begin ideating on possible solutions.</p>
+                            <p>The first designs for the app typically began with a wireframe to gather team and SME feedback before adding fidelity. As the project progressed and our stable of Sketch symbols grew, initial designs tended to look like mockups since many of the patterns and UI components had been established.</p>
                         </div>
                         <div className="left">
-                            <img src={MPAWireframeImage} />
+                            <img src={MPAWireframeImage} alt="Wireframes of geospatial interface for mission planning app" />
                         </div>
                     </div>
                     <div className="row">
                         <div className="left">
-                            <p>Once a design had been tested and/or critiqued by the team, I would create documentation within the design using the Sketch plugin Notebook Pro. All designs were added to a RealtimeBoard, giving the team a single location to view all app designs. The Project Manager, Lead Developer, and myself would then write up the user story (or stories) needed to build the design. We used Jira to create stories and added acceptance criteria based on key interactions described in the already-created design documentation. The final step (when applicable) was to update any changes to the style guide using Zeplin.</p>
+                            <p>Documentation was added within the design using the Sketch plugin Notebook Pro. All designs were then added to RealtimeBoard to provide a single location for the team to view them. The Project Manager, Lead Developer, and myself would then write up the user story (or stories) needed to build the design. We used Jira to create stories and added acceptance criteria based on key interactions described in the already-created design documentation. The final step (when applicable) was to update any changes to the style guide using Zeplin.</p>
                         </div>
                         <div className="right">
-                            <img src={MockupImage} />
+                            <img src={MockupImage} alt="Mockup of document editor in mission planning app"/>
                         </div>
                     </div>
                     <div className="row">
@@ -140,7 +142,16 @@ class USArmy extends Component {
                             <p>Since most of our participants were located elsewhere and our team spanned both coasts, testing was typically conducted remotely using GoToMeeting and RealtimeBoard used to gather observer notes. We would then hold debriefing sessions to analyze observations and identify action items.</p>
                         </div>
                         <div className="left">
-                            <img src={UsabilityImage} />
+                            <img src={UsabilityImage} alt="Usability testing being done via Atomic"/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="left">
+                            <p>We maintained a second user story map specifically for the toolkit. As application features were designed, our team would determine which parts would be useful is repurposed and add these to the toolkit map. The developers would determine how best to package the code, and we would work together to determine how to create documentation.</p>
+                        <p>Rather than requiring developers to use an entire toolkit, ATS is currently testing and packaging a collection of stand-alone components that extend the React Native library. When completed, these will be open-source and available via GitHub.</p>
+                        </div>
+                        <div className="right">
+                            <img src={GHPhoto} alt="toolkit on GitHub" />
                         </div>
                     </div>
                 </section>
@@ -148,16 +159,16 @@ class USArmy extends Component {
                 <section className="outcomes" ref={(section) => { this.Outcomes = section; }}>
                     <div className="container">
                         <h3>Outcomes</h3>
-                        <ul>
-                            <li>Rather than requiring developers to use an entire toolkit, ATS is currently testing and packaging a collection of stand-alone components that extend the React Native library. When completed, these will be open-source and available via GitHub.</li>
-                            <li>The mission planning application has been tested with soldiers and received a favorable response. We are currently working with the Army to obtain additional funding to move into production.</li>
+                        <ul className="custom-bullets">
+                            <li><MdDone className='bullet-check'/>Developed a set of tools to both be used by our company and released via GitHub to be used by the React Native community.</li>
+                            <li><MdDone className='bullet-check'/>The mission planning application has been tested with soldiers and received a favorable response. We are currently working with the Army to obtain additional funding to move into production.</li>
                         </ul>
                     </div>
                 </section>
             
                 <section className="other-projects" ref={(section) => { this.OtherProjects = section; }}>
                     <button className="previous-button" onClick={() => scrollToComponent(this.Intro, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowUp/></button>
-                    <ProjectTabs />
+                    <CSFooter />
                 </section>
             </div>
         );

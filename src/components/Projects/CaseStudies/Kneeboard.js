@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import ScrollToTopOnMount from "../../../ScrollToTopOnMount";
 import scrollToComponent from 'react-scroll-to-component';
 import {MdKeyboardArrowDown, MdKeyboardArrowUp, MdDone, MdFormatQuote} from 'react-icons/lib/md';
-import ProjectTabs from '../ProjectTabs';
+import CSFooter from '../CSFooter';
 import HomePhoto from '../../../assets/kneeboard.jpg';
+import AYTMPhoto from '../../../assets/aytm.png';
 import USNavyLogo from "../../../assets/logos/us-navy.png";
 import MapPhoto from '../../../assets/map-interface.png';
 import MenuPhoto from '../../../assets/kb-main-menu.png';
@@ -94,7 +95,7 @@ class USArmy extends Component {
                     <h3>Process - The Story</h3>
                     <div className="row">
                         <div className="right">
-                            <p>ATS was contracted by the U.S. Navy to research and prototype an iPad application for F-18 pilots. The goal was to replace the analog kneeboards (i.e. clipboard strapped to a pilots leg with pertinent flight information) with a digital version. The new "electronic kneeboard" was meant to expand the pilots capabilities by making mechanical, flight, and mission-related information accessible to the pilot.In addition to mapping a path to developing the application, we were tasked to build a prototype of a brake temperature gauge to help pilots determine if their brakes are too hot to take off.</p>
+                            <p>ATS was contracted by the U.S. Navy to research and prototype an iPad application for F-18 pilots. The goal was to replace the analog kneeboards (i.e. clipboard strapped to a pilots leg with pertinent flight information) with a digital version. The new "electronic kneeboard" was meant to expand the pilots capabilities by making mechanical, flight, and mission-related information accessible to the pilot. In addition to mapping a path to developing the application, we were tasked to build a prototype of a brake temperature gauge to help pilots determine if their brakes are too hot to take off.</p>
                             <p>Our team addressed this challenge using a user-centered design approach that focused on researching the needs of the pilot and then comparing them with those of the organization. We then prototyped some of the identified components to determine technical limitations and exhibit UI designs.</p>
                         </div>
                         <div className="left">
@@ -104,14 +105,10 @@ class USArmy extends Component {
                     <div className="row">
                         <div className="left">
                             <p>Through stakeholder interviews, we were able to better understand project requirements.  We then began meeting with SMEs and representative users to build conduct a task analysis and identify user workflows. This information allowed us to create an initial set of scenarios to determine capabilities to design.</p>
-                            <p>We wanted to further validate potential capabilities, so we conducted a survey with the fleet at Naval Air Station Oceana. Though we only had about 40 responses to the survey, we received many comments that proved helpful. Many pilots indicate a preference for using the commercial app ForeFlight over a custom developed solution since they were already familiar with it and it provided most of the utilities they need during flight. So instead of focusing on rebuilding features they have, we recommended the Navy focus on building components geared directly with mission operations.</p>
+                            <p>We wanted to further validate potential capabilities, so we conducted a survey with the fleet at Naval Air Station Oceana using AYTM.com. Though we only had about 40 responses to the survey, we received many comments that proved helpful. Many pilots indicated a preference for using the commercial app ForeFlight over a custom developed solution since they were already familiar with it and it provided most of the utilities they need during flight. So instead of focusing on rebuilding features they have, we recommended the Navy focus on building components geared directly with mission operations and either integrate or grant access for pilots to use ForeFlight for non-mission tasks.</p>
                         </div>
                         <div className="right">
-                            <blockquote>
-                                <MdFormatQuote className="quote-icon"/>
-            <p>Integrate with ForeFlight - developing our own app is not smart, cost effective, or an "Enterprise" solution. If we want to call ourselves the [Naval Aviation Enterprise] we need to act like it.</p>
-                                <cite>Survey Respondent</cite>
-    </blockquote>
+                            <img src={AYTMPhoto} alt="User survey results on AYTM.com"/>
                         </div>
                     </div>
                     <div className="row">
@@ -138,15 +135,15 @@ class USArmy extends Component {
                 <section className="outcomes" ref={(section) => { this.Outcomes = section; }}>
                     <div className="container">
                         <h3>Outcomes</h3>
-                        <ul>
-                            <li>While we were not selected to move forward to the next of this project, this project was one of the first UX research projects completely organized and ran by ATS. As such, it introduced discovery methods that have had far reaching affect for ATS as a company.</li>
+                        <ul className="custom-bullets">
+                            <li><MdDone className='bullet-check'/>While we were not selected to move forward to the next of this project, this project was one of the first UX research projects completely organized and ran by ATS. As such, it introduced discovery methods that have had far reaching affect for ATS as a company.</li>
                         </ul>
                     </div>
                 </section>
             
                 <section className="other-projects" ref={(section) => { this.OtherProjects = section; }}>
                     <button className="previous-button" onClick={() => scrollToComponent(this.Intro, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})}><MdKeyboardArrowUp/></button>
-                    <ProjectTabs />
+                    <CSFooter />
                 </section>
             </div>
         );

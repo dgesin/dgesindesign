@@ -240,18 +240,30 @@
 }
 
 .outcomes ul{
-    padding:0;
+    background:#8EA4D2;
+    box-shadow:.2rem .4rem rgba(0, 0, 0, 0.5);
+    border-radius:.4rem;
+    padding-left:8%;
+    padding-right:4%;
+    padding-top:2%;
+    padding-bottom:2%;
 }
 
 .outcomes li{
-    background:#8EA4D2;
-    border-radius:.4rem;
+    border-left: 1px solid white;
     color:white;
     display:inline-block;
-    margin:1%;
-    padding:2%;
-    width:94%;
     vertical-align:top;
+    text-decoration: list;
+}
+
+
+.outcomes li:last-child{
+    margin-bottom:0;
+}
+
+.outcomes .bullet-check{
+    color:white;
 }
 
 .other-projects{
@@ -400,10 +412,6 @@
         order:2;
         padding-left:5%;
         padding-right:15%;
-    }
-    
-    .outcomes li{
-        width:27.333%;
     }
     
     .other-projects{
