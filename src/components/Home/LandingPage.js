@@ -63,7 +63,11 @@ class LandingPage extends Component {
                 <section className="title">
                     <div className="title-text">
                         <h1>Derek Gesin</h1>
+<<<<<<< HEAD
                         <h2>User Experience Design TEST</h2>
+=======
+                        <h2>User Experience Design</h2>
+>>>>>>> FETCH_HEAD
                         <p>I work with users, development teams, and stakeholders to design technological solutions for complex subjects.</p>
                         <div className="scroll-navigation">
                             <button onClick={() => scrollToComponent(this.Skillset, { offset:0, align: 'top', duration: 700, ease:'inOutExpo'})} className='scroll-menu-item two-items'>What I Do</button>
