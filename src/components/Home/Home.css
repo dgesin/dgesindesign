@@ -1,0 +1,206 @@
+.homepage{
+    height:100%;
+    position:relative;
+}
+
+.lp-navigation{
+    border-top:1px solid rgba(255, 255, 255, 0.5);
+    border-bottom:1px solid rgba(255, 255, 255, 0.5);    
+    margin-top:2rem;
+}
+
+.lp-menu-item{
+    background:transparent;
+    border:none;
+    color:white;
+    display:inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size:1.4rem;
+    line-height:3rem;
+    text-align:center;
+    text-decoration:none;
+    text-shadow:none;
+    text-transform:uppercase;
+    width:50%;
+}
+
+.lp-menu-item.active{
+    background:rgba(9, 134, 134, .5);
+}
+
+.landing-page{
+    margin:0;
+    position:relative;
+}
+
+.title{
+    bottom:5%;
+    color:white;
+    display:inline-block;
+    margin-left:8%;
+    overflow:hidden;
+    position:fixed;
+    text-shadow:2px 4px 0px rgba(0, 0, 0, 0.5);
+    width:40%;
+    z-index:100;
+}
+
+.title h1, .title h2{
+    font-weight:300;
+    margin:1.2rem 0;
+    white-space:nowrap;
+}
+
+.title h1{
+    font-size:7.6rem;
+}
+
+.title h2{
+    font-size:4.8rem;
+}
+
+.title p{
+    font-size:2rem;
+    margin:0;
+    margin-top:1.2rem;
+}
+
+.skillset,
+.clients{
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 20%,rgba(0,0,0,0.65) 39%,rgba(0,0,0,0.65) 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    color:white;
+    display:inline-block;
+    position:absolute;
+    right:0;
+    padding-top:5rem;
+    padding-right:8%;
+    width:40%;
+    z-index:100;
+}
+
+.skillset.show,
+.clients.show{
+    opacity:1;
+    transition: opacity 0.3s;
+}
+
+.skillset.false,
+.clients.false{
+    opacity:0;
+    transition: opacity 0.3s;
+}
+
+.skillset .row{
+    margin:0 auto;
+}
+
+.skill{
+    display:block;
+    margin:0 auto;
+    padding: 2rem 0 6rem;
+    vertical-align:top;
+    width: 46%
+}
+
+.skill-icon, 
+.skill-label,
+.skill-description{
+    display:block;
+}
+
+.skill-icon{
+    margin:0 auto;
+    position:relative;
+    width:70%;
+    height:10rem;
+}
+
+.skill-icon img{
+    max-height:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.skill-label{
+    text-align:center;
+}
+
+.clients{
+    position: fixed;
+    top: 50%;
+    right: 0%;
+    bottom: 0;
+    height: 70%;
+    transform: translateY(-50%);
+    padding: 15% 8% 15% 0;
+}
+
+.clients h2{
+    color:white;
+}
+
+.clients .logo{
+    display:inline-block;
+    text-align:center;
+    width:100%;
+    width: 50%;
+    height: 20%;
+    margin: 0;
+    padding: 0;
+}
+
+.clients img{
+    margin: 0 auto;
+    max-width:80%;  
+    vertical-align:middle;
+}
+
+.circle img{
+    max-width:5rem;
+}
+
+
+@media screen and (max-width:740px){
+    .title{
+        text-align:center;
+        top:50%;
+        left:50%;
+        bottom:auto;
+        margin:0;
+        padding:2rem;
+        transform:translate(-50%, -50%);
+        width:80%;
+    }
+    .title h1{
+        font-size:4.2rem;
+    }
+    .title h2{
+        font-size:2.4rem;
+    }
+} 
+
+@media screen and (min-width:768px){
+
+    .clients .logo{
+        width:50%;
+    }
+    
+    .logo img{
+        max-width: 30%;
+    }
+    
+}
+
+
+@media screen and (min-width: 741px) and (max-width: 1200px){
+    .title{
+        max-width: 60%;
+    }
+    
+}
+
+@media screen and (min-width:1024px){
+
+}

@@ -1,0 +1,472 @@
+.case-study{
+    height:100%;
+}
+
+.case-study section:not(:first-child){
+    clear:both;
+    display:block;
+}
+
+.case-study h3{
+    margin-bottom: 4rem;
+    text-align:center;
+}
+
+.label{
+    border-bottom:1px solid rgba(255, 255, 255, 0.5);
+    display:inline-block;
+    font-size:1.4rem;
+    letter-spacing:.2rem;
+    line-height:2.4rem;
+    width:auto;
+}
+
+.next-button, 
+.previous-button{
+    background:rgba(0, 0, 0, 0.5);
+    border:none;
+    border-radius:50%;
+    color:white;
+    display:none;
+    font-size:3rem;
+    opacity:0.5;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    line-height:4.4rem;
+    width:4.4rem;
+    z-index:300;
+}
+
+.next-button:hover,
+.previous-button:hover{
+    color:#E3DFFF;
+    cursor:pointer;
+    opacity:1;
+}
+
+.previous-button{
+    top:7%;
+}
+
+.next-button{
+    bottom:5%;
+}
+
+.skills{
+    display:none;
+}
+
+.intro{
+    overflow:hidden;
+    position:relative;
+    width:100%;    
+}
+
+.intro-text{
+    color:white;
+    display:inline-block;
+    margin-top:11rem;
+    padding-bottom:5rem;
+    position:relative;
+    text-align:center;
+    width:100%;
+    z-index:200;
+}
+
+.intro-project{
+    display:block;
+    padding:2% 5%;
+}
+
+.case-study .horizontal-list{
+    color:white;
+    display:inline-block;
+    font-size:1.3rem;
+    font-weight: 100;
+    font-style:italic;
+}
+
+.case-study .horizontal-list li:first-child{
+    padding-left:0;
+}
+
+.intro-logo{
+    display:block;
+    margin-right:5%;
+    margin:0 auto;
+    max-height:10rem;
+    max-width: 50%;
+    vertical-align:middle;
+}
+
+.intro-title{
+    display:inline-block;
+    font-size:3.4rem;
+    line-height:3.8rem;
+    width:75%;
+    vertical-align:middle;
+}
+
+.custom-bullets{
+    padding-right:2rem;
+    padding-left:6rem;
+}
+
+.custom-bullets li{
+    border-left: 1px solid #50A398;
+    list-style:none;
+    margin-bottom:1.2rem;
+    padding-left:2rem;
+    position:relative;
+    text-align:left;
+}
+
+.bullet-check{
+    color:#50A398;
+    padding:0 .8rem;
+    position:absolute;
+    font-size:2.4rem;
+    left:-5rem;
+    vertical-align:middle;
+}
+
+.process-summary{
+    height: auto;
+    padding:0;
+    position:relative;
+    overflow:hidden;
+}
+
+.process-summary .cs-text{
+    left:0%;
+    padding:5%;
+    width:90%;
+    z-index:200;
+}
+
+.process-summary li{
+    margin-bottom:.8rem;
+}
+
+.process-summary .background{
+    display:none;
+}
+
+.row{
+    display:block;
+    align-items:center;
+}
+
+.col-2 .left, 
+.col-2 .right{
+    display:block;
+    align-items:center;
+    flex:1;
+    margin:5rem 0;
+    text-align:center;
+    width:100%;
+}
+
+.col-2 p{
+    text-align:left;
+}
+
+.col-2 img{
+    border:.1rem solid rgba(0, 0, 0, 0.5);
+    box-shadow:.2rem .4rem .2rem rgba(0, 0, 0, 0.5);
+    display:inline-block;
+    margin: 0 auto;
+    max-width:100%;
+    max-height:70rem;
+}
+
+.row:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.my-role{
+    background:#49516F;
+    color:white;
+    padding:3rem 0;
+}
+
+.my-role h3{
+    text-align:left;
+}
+
+.my-role{
+    position:relative;
+    text-align:center;
+}
+
+.my-role .custom-bullets li{
+    display:inline-block;
+    border-left: 1px solid white;
+    width:90%;
+    margin: 0 4% 1.2rem 0;
+    vertical-align: top;
+}
+
+.my-role .bullet-check{
+    color:white;
+}
+
+.process{
+    padding:0 5%;
+    position:relative;
+    text-align:center;
+}
+
+.process-section{
+    position:relative;
+}
+
+.process .cs-text{
+    margin-bottom: 15%;
+}
+
+.cs-text{
+    display:block;
+    position:relative;
+    vertical-align:middle;
+}
+
+.outcomes{
+    margin-bottom:5rem;
+    position:relative;
+}
+
+.outcomes ul{
+    background:#8EA4D2;
+    box-shadow:.2rem .4rem rgba(0, 0, 0, 0.5);
+    border-radius:.4rem;
+    padding-left:8%;
+    padding-right:4%;
+    padding-top:2%;
+    padding-bottom:2%;
+}
+
+.outcomes li{
+    border-left: 1px solid white;
+    color:white;
+    display:inline-block;
+    vertical-align:top;
+    text-decoration: list;
+}
+
+
+.outcomes li:last-child{
+    margin-bottom:0;
+}
+
+.outcomes .bullet-check{
+    color:white;
+}
+
+.other-projects{
+    background: #49516F;
+    color:white;
+    height:auto;
+    position:relative;
+}
+
+.other-projects .previous-button{
+    top:2%;
+}
+
+.other-projects .projects{
+    margin:0;
+    width:100%;
+}
+
+.other-projects ul{
+    padding:0;
+}
+
+.other-projects .cs-photo{
+    display:none;
+}
+
+.other-projects .case-studies li{
+    border-radius:.4rem;
+    margin: 1% 2%;
+    height:9rem;
+    width: 96%;
+}
+
+.other-projects .cs-details{
+    border-radius:.4rem;
+}
+
+@media screen and (min-width:815px){
+
+    .case-study section{
+        overflow:hidden;
+    }
+
+    .case-study .background.mobile{
+        display:none;
+    }
+    
+    .case-study .background.wide-screen{
+        display:inherit;
+    }
+    
+    .case-study h3{
+        text-align:left;
+    }
+    
+    .intro{
+        height: 100%;
+    }
+    
+    .intro-project{
+        padding:0;
+    }
+    
+    .intro-text{
+        top:auto;
+        transform:translateY(0%);
+        bottom:5%;
+        margin: 0 5%;
+        padding-bottom:0;
+        position:absolute;
+        text-align:left;
+        top:auto;
+        transform:translate(0);
+        width:40%;
+    }
+    
+    .intro-text h3{
+        margin-bottom:2rem;
+    }
+    
+    .intro-title{
+        margin-bottom:2rem;
+    }
+    
+    .cs-text{
+        display:block;
+        margin: 0 5%;
+        width:40%;
+    }
+    
+    .cs-text{
+        text-align:left;
+        z-index:200;
+        left:50%;
+    }
+    
+    .intro-logo{
+        display:inline-block;
+        margin: 0 5% 0 0;
+        max-width:20%;
+    }
+    
+    .process-summary{
+        height:100%;
+    }
+    
+    .process-summary .cs-text{
+        left:50%;
+        top:20%;
+        width:30%;
+    }
+    
+    .process-summary .background{
+        display:inherit;
+    }
+    
+    .next-button, 
+    .previous-button{
+        display:inherit;
+    }
+    
+    .my-role .custom-bullets li{
+        width:40%;
+    }
+    
+    .process{
+        padding:3% 0;
+    }
+    
+    .process h3{
+        text-align:center;
+    }
+    
+    .row{
+        display:flex;
+        align-items:center;
+    }
+
+    .col-2 .left{
+        order:0;
+        padding-left:15%;
+        padding-right:5%;
+    }
+
+    .col-2 .right{
+        order:2;
+        padding-left:5%;
+        padding-right:15%;
+    }
+    
+    .other-projects{
+        height:95%;
+    }
+    
+    .other-projects .case-studies li{
+        width: 46%;
+    }
+    
+}
+
+@media screen and (min-width:815px) and (max-width:1024px){
+    .process-summary .cs-text{
+        left:50%;
+        top:0;
+    }
+    
+    .process-summary h3{
+        margin-bottom:0;
+    }
+    
+    .process-summary li{
+        margin-bottom:0;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    
+    .intro-text{
+        bottom:10%;
+    }
+    
+    .skills{
+        display:inherit;
+        margin-bottom:5rem;
+        z-index:500;
+    }
+
+}
+
+@media screen and (min-width:1367px) {
+    
+    .intro-text{
+        margin-left: 10%;
+        width: 35%;
+    }
+    
+    .intro-title{
+        margin-bottom:3rem;
+    }
+    
+    .cs-text{
+        margin-right: 10%;
+        width: 31%;
+    }
+
+}
